@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:wght@400;500;600;700&subset=cyrillic,cyrillic-ext,latin,latin-ext&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Редакційна елегантна антиква з бездоганною кирилицею */
+.font-serif,
+.font-editorial {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Креативна перфорована квитанція-тікет (Extrafazant ticket button) */
+.ticket-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ticket-btn::before,
+.ticket-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.ticket-btn::before {
+  left: -6px;
+}
+
+.ticket-btn::after {
+  right: -6px;
+}
+
+/* Тактильні наліпки-стікери (Extrafazant sticker badges) */
+.tactile-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: 0 6px 18px -3px rgba(0, 102, 179, 0.18), 0 2px 6px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.tactile-sticker:hover {
+  transform: scale(1.08) rotate(0deg) !important;
+  box-shadow: 0 12px 24px -4px rgba(0, 102, 179, 0.25);
+}
+
+/* Органічна хвиляста лінія (Wavy SVG underline) */
+.wavy-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' fill='none'%3E%3Cpath d='M0 4C10 0 10 8 20 4C30 0 30 8 40 4' stroke='%230066B3' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 32px 6px;
+  padding-bottom: 8px;
+}
+
+/* Анімовані переливання для інтерактивних медіа-фреймів */
+.media-frame-shimmer {
+  background: linear-gradient(
+    125deg,
+    #f8fafc 0%,
+    #eef5fc 30%,
+    #ffffff 50%,
+    #eef5fc 70%,
+    #f8fafc 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-flow 9s ease infinite;
+}
+
+.media-frame-shimmer-blue {
+  background: linear-gradient(
+    135deg,
+    #004b87 0%,
+    #0066b3 40%,
+    #0077d4 70%,
+    #004b87 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-flow 10s ease infinite;
+}
+
+/* Приховати пряму смугу прокрутки (no-scrollbar) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Плавні ключові анімації та апаратний блюр */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
