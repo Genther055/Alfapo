@@ -367,7 +367,7 @@ export default function PrintPage() {
                 href="/capabilities#order-form"
                 className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white bg-slate-950 hover:bg-edelvin-blue px-8 py-4 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-0.5 group"
               >
-                <span>Замовити розрахунок накладу</span>
+                <span>Замовити консультацію накладу</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
 

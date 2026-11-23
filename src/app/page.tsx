@@ -228,7 +228,7 @@ export default function HomePage() {
                   href="#direct-contact"
                   className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-500 hover:text-slate-950 pb-1.5 transition-all cursor-pointer"
                 >
-                  <span>Прямий розрахунок тиражу</span>
+                  <span>Консультація технолога</span>
                   <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
                 </a>
               </div>

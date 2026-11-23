@@ -334,7 +334,7 @@ export default function CatalogPage() {
                         href={`/catalog/${item.slug}`}
                         className="text-slate-950 font-bold uppercase tracking-wider flex items-center gap-1.5 group-hover:text-edelvin-blue transition-colors"
                       >
-                        <span>Специфікація та розрахунок</span>
+                        <span>Детальніше про виріб</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
