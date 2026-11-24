@@ -11,8 +11,8 @@ import ProductCarousel, { CarouselItem } from "@/components/ProductCarousel";
 const LABEL_SHOWCASE_ITEMS: CarouselItem[] = [
   {
     id: "label-kvass",
-    title: "Квас «Хлібний» традиційний 0,5 л",
-    subtitle: "Фігурна висічна етикетка • Традиційне живе бродіння",
+    title: "Етикетка для традиційних напоїв та бродіння",
+    subtitle: "Фігурна висічна етикетка для скляної тари",
     category: "Напої та бродіння",
     image: "/images/labels/label-kvass.png",
     description: "Преміальна фігурна самоклейна етикетка для скляних пляшок. Стійка до вологи, конденсату та охолодження в холодильних камерах.",
@@ -21,8 +21,8 @@ const LABEL_SHOWCASE_ITEMS: CarouselItem[] = [
   },
   {
     id: "label-mors",
-    title: "Морс ягідний та Бузковий лимонад",
-    subtitle: "Серійний дует 0,75 л та 0,33 л • Карпатські джерела",
+    title: "Серійні етикетки для лінійки напоїв та соків",
+    subtitle: "Серійний випуск для скляних пляшок 0,75 л та 0,33 л",
     category: "Безалкогольні напої",
     image: "/images/labels/label-mors-lemonade.png",
     description: "Друк серії смаків в одному тиражі на Konica Minolta AccurioLabel 400. Точна передача пастельних відтінків та гравюрних ілюстрацій.",
@@ -31,8 +31,8 @@ const LABEL_SHOWCASE_ITEMS: CarouselItem[] = [
   },
   {
     id: "coffee-sku",
-    title: "Серійні етикетки для лінійки крафтової кави",
-    subtitle: "Єдина серія для різних сортів та ваги фасування",
+    title: "Серійні етикетки для крафтової кави та чаю",
+    subtitle: "Єдина колірна дизайн-система для кавових дой-паків",
     category: "Крафтова кава",
     image: "/images/labels/coffee-sku-lineup.png",
     description: "Єдина колірна дизайн-система для кавових дой-паків. Легка заміна сортів, ваги, дат обсмаження та QR-кодів без зупинки виробництва.",
@@ -41,8 +41,8 @@ const LABEL_SHOWCASE_ITEMS: CarouselItem[] = [
   },
   {
     id: "food-delicco",
-    title: "Етикетки для скляної тари та соусів",
-    subtitle: "Промислове маркування соусів, приправ та консервації",
+    title: "Етикетки для скляної тари, соусів та консервації",
+    subtitle: "Промислове маркування харчової продукції",
     category: "Харчовий сектор",
     image: "/images/labels/food-portfolio-delicco.png",
     description: "Промислове тиражування самоклейної етикетки для скляних банок та пластикових відер. Стійкість до жирів, олій та перепадів температур.",
@@ -52,7 +52,7 @@ const LABEL_SHOWCASE_ITEMS: CarouselItem[] = [
   {
     id: "wine-chizay",
     title: "Преміальна винна та крафтова етикетка",
-    subtitle: "Фактурний винний папір верже та тиснення Kurz",
+    subtitle: "Фактурний винний папір верже та тиснення фольгою",
     category: "Виноробство та HoReCa",
     image: "/images/labels/wine-chizay.png",
     description: "Фактурний винний папір верже, тиснення благородною золотою фольгою Kurz, прецизійний контурний різ.",
@@ -146,7 +146,7 @@ const PACKAGING_SHOWCASE_ITEMS: CarouselItem[] = [
   {
     id: "case-bags",
     title: "Фірмові крафтові пакети з золотим тисненням",
-    subtitle: "Green Leaf Boutique та Craft Coffee Roasters",
+    subtitle: "Серійне преміальне пакування для бутиків та кав'ярень",
     category: "Брендована упаковка",
     image: "/images/packaging/bag-green-leaf.png",
     description: "Цупкий європейський крафт, посилені ручки, гаряче тиснення золотою фольгою та глибокий матовий шовкодрук.",
