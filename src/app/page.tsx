@@ -7,6 +7,7 @@ import { CATALOG_CLUSTERS } from "@/data/catalog";
 import { useLanguage } from "@/context/LanguageContext";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import ProductCarousel, { CarouselItem } from "@/components/ProductCarousel";
+import FullWidthVideoSection from "@/components/FullWidthVideoSection";
 
 // Вибрані кейси для головної каруселі
 const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
@@ -275,6 +276,21 @@ export default function HomePage() {
 
         </div>
       </section>
+
+      {/* ФЛАГМАНСЬКЕ ВІДЕО ВИРОБНИЦТВА НА ВСЮ ШИРИНУ */}
+      <FullWidthVideoSection
+        videoSrc="/videos/plant-hero.mp4"
+        posterSrc="/videos/plant-hero-poster.jpg"
+        eyebrow="ВИРОБНИЧІ ЛІНІЇ В ДІЇ • ВІННИЦЯ"
+        title="Автоматизовані лінії та індустріальні комплекси"
+        description="Повний цикл поліграфії без посередників: автоматична лінія виготовлення твердої палітурки 7БЦ, прецизійні ниткошвейні комплекси, цифровий рулонний друк та контурна висічка."
+        stats={[
+          { label: "Площа виробництва", value: "2 500 м²" },
+          { label: "Швидкість ліній", value: "до 5 000/год" },
+          { label: "Власна база верстатів", value: "24 одиниці" },
+          { label: "Контроль тиражу", value: "100% ВТК" },
+        ]}
+      />
 
             {/* 2. СІТКА НАПРЯМІВ ВИРОБНИЦТВА (CAPABILITIES ARCHITECTURE) */}
             <section className="py-20 lg:py-28 border-b border-slate-200 bg-white">

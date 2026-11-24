@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import ProductCarousel, { CarouselItem } from "@/components/ProductCarousel";
+import FullWidthVideoSection from "@/components/FullWidthVideoSection";
 
 // Реальні технологічні зразки виробництва
 const PRINT_SHOWCASE_ITEMS: CarouselItem[] = [
@@ -439,6 +440,21 @@ export default function PrintPage() {
           />
         </div>
       </section>
+
+      {/* ВІДЕО НА ВСЮ ШИРИНУ: АВТОМАТИЗОВАНЕ СКРІПЛЕННЯ КАЛЕНДАРІВ ТА ПРУЖИННИЙ БЛОК */}
+      <FullWidthVideoSection
+        videoSrc="/videos/calendar-renz.mp4"
+        posterSrc="/videos/calendar-renz-poster.jpg"
+        eyebrow="КОРПОРАТИВНІ ТА КВАРТАЛЬНІ КАЛЕНДАРІ"
+        title="Швидкісна перфораційно-пружинна лінія RENZ"
+        description="Промисловий монтаж металевої пружини Wire-O з ригелем для настінних перекидних та триблочних квартальних календарів. Висока продуктивність збирання тиражів від 50 до 10 000 примірників у стислі сезонні терміни."
+        stats={[
+          { label: "Швидкість збирання", value: "до 1 200/год" },
+          { label: "Крок перфорації", value: "3:1 та 2:1" },
+          { label: "Кольори пружини", value: "Біла, чорна, золото" },
+          { label: "Формати", value: "від А5 до А2" },
+        ]}
+      />
 
             {/* ДОДРУКАРСЬКИЙ ВІДДІЛ ТА ІНЖЕНЕРНИЙ СУПРОВІД                  */}
             <section className="py-20 lg:py-28 border-b border-slate-200 bg-white">

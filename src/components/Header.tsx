@@ -263,16 +263,18 @@ export default function Header() {
         }}
         className="fixed top-0 left-0 right-0 z-50 w-full will-change-transform"
       >
-        {/* Верхній чорний рядок оголошень (dismissible) */}
+        {/* Верхній чорний рядок оголошень (dismissible) з тонким золотим акцентом */}
         {showTopBar && (
-          <div className="bg-[#111111] text-white text-[11px] sm:text-xs py-2 px-4 transition-all border-b border-white/10">
+          <div className="bg-[#111111] text-white text-[11px] sm:text-xs py-2 px-4 transition-all border-b border-gold-400/20">
             <div className="w-full max-w-[1680px] mx-auto px-2 sm:px-6 flex items-center justify-between">
               <div className="flex-1 text-center font-light tracking-wide text-slate-300 truncate">
+                <span className="text-gold-300 font-medium">«Альфа і Омега»</span>
+                <span className="mx-2 text-slate-500">•</span>
                 <span>{t.header.banner}</span>
                 <span className="hidden md:inline text-slate-600 mx-2">|</span>
                 <a
                   href="tel:+380432550333"
-                  className="hidden md:inline text-white hover:text-edelvin-blue font-medium transition-colors"
+                  className="hidden md:inline text-gold-200 hover:text-gold-300 font-medium transition-colors"
                 >
                   +38 (0432) 550-333
                 </a>
@@ -368,10 +370,11 @@ export default function Header() {
 
             {/* ЦЕНТРАЛЬНА ЧАСТИНА: АЛЬФА І ОМЕГА В ОДНОМУ ШРИФТІ ТА КОЛЬОРІ */}
             <div className="hidden md:flex items-center justify-center text-center px-2 lg:px-4 shrink min-w-0">
-              <Link href="/" className="group inline-flex items-center">
-                <span className="font-serif text-lg sm:text-xl xl:text-2xl font-semibold tracking-[0.14em] sm:tracking-[0.18em] text-slate-950 uppercase group-hover:text-edelvin-blue transition-colors whitespace-nowrap">
+              <Link href="/" className="group inline-flex items-center gap-2">
+                <span className="font-serif text-lg sm:text-xl xl:text-2xl font-semibold tracking-[0.16em] sm:tracking-[0.2em] text-slate-950 uppercase group-hover:text-gold-700 transition-colors whitespace-nowrap">
                   АЛЬФА І ОМЕГА
                 </span>
+                <span className="hidden xl:inline-block w-1.5 h-1.5 rounded-full bg-gold-400"></span>
               </Link>
             </div>
 

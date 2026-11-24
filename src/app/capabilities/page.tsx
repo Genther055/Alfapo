@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Phone, Mail } from "lucide-react";
 import ScrollRevealText from "@/components/ScrollRevealText";
+import FullWidthVideoSection from "@/components/FullWidthVideoSection";
 
 // Scroll fade-in animation container
 function ScrollFadeIn({
@@ -715,6 +716,21 @@ export default function CapabilitiesPage() {
           </div>
         </section>
 
+        {/* ВІДЕО-ПРОЦЕС 1: НИТКОШВЕЙНА ТА ПАЛІТУРНА ЛІНІЯ 7БЦ */}
+        <FullWidthVideoSection
+          videoSrc="/videos/book-binding.mp4"
+          posterSrc="/videos/book-binding-poster.jpg"
+          eyebrow="КНИЖКОВО-ЖУРНАЛЬНА МАНУФАКТУРА 7БЦ"
+          title="Автоматичне ниткошвейне скріплення блоків"
+          description="Швидкісна промислова лінія Horizon та НШС забезпечує надійне зшивання книжкових блоків нитками з подальшим обтисканням на гідравлічних пресах. Жодних випадкових розпадів блоку навіть при щоденному навантаженні."
+          stats={[
+            { label: "Точність стібка", value: "±0.1 мм" },
+            { label: "Обсяг блоку", value: "до 800 сторінок" },
+            { label: "Тип палітурки", value: "Класична 7БЦ" },
+            { label: "Стійкість", value: "10+ років" },
+          ]}
+        />
+
         {/* Розділ: Косметика, масла та непродовольчі товари */}
         <section id="nonfood" className="py-20 lg:py-28 border-b border-slate-200 bg-white">
           <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
@@ -961,6 +977,21 @@ export default function CapabilitiesPage() {
 
         </div>
       </section>
+
+        {/* ВІДЕО-ПРОЦЕС 2: АВТОМАТИЗОВАНЕ СКЛАДСЬКЕ ПАКУВАННЯ ТА ЛОГІСТИКА */}
+        <FullWidthVideoSection
+          videoSrc="/videos/packaging-line.mp4"
+          posterSrc="/videos/packaging-line-poster.jpg"
+          eyebrow="СКЛАДСЬКА ЛОГІСТИКА ТА ПАЛЕТУВАННЯ"
+          title="Захищене пакування та автоматизоване стрейчування"
+          description="Кожна партія продукції пакується у вологозахисні короби та автоматично обмотується на палетувальній лінії. Гарантована цілісність тиражу при міжрегіональній доставці власним автопарком або кур'єрськими службами."
+          stats={[
+            { label: "Захист тиражу", value: "3-шаровий" },
+            { label: "Швидкість відвантаження", value: "від 24 год" },
+            { label: "Власний автопарк", value: "до 5 тонн" },
+            { label: "Доставка по Україні", value: "1-2 дні" },
+          ]}
+        />
 
             {/* 6. ISO ТА ЧОМУ ЦЕ ПРАЦЮЄ ДЛЯ B2B                             */}
             <section className="py-20 lg:py-28 border-b border-slate-200 bg-white">
