@@ -12,64 +12,64 @@ import FullWidthVideoSection from "@/components/FullWidthVideoSection";
 // Вибрані кейси для головної каруселі
 const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
   {
-    id: "home-roll-label",
-    title: "Рулонна цифрова етикетка",
-    subtitle: "Konica Minolta AccurioLabel 400 • Будь-який контур без штампів",
-    category: "Серійний друк SKU",
-    image: "/images/production/roll-label-machine.png",
-    description: "Серійне маркування для ліній розливу напоїв, харчових банок, олій та косметики. Вологостійкий поліпропілен, винний фактурний папір, білий тонер.",
-    badge: "Рулонний друк",
-    link: "/catalog/roll-labels",
+    id: "home-ao-showcase",
+    title: "Комплексні брендовані рішення «Альфа і Омега»",
+    subtitle: "Крафтові пакети, шоубокси, фігурна етикетка та розгортки",
+    category: "Фірмова продукція",
+    image: "/images/branding/alfa-omega-showcase.png",
+    description: "Повний асортимент представницької поліграфії з фірмовою символікою: пакети з гарячим тисненням, жорсткі коробки, самоклейні етикетки та контурна висічка.",
+    badge: "Alfa & Omega Brand",
+    link: "/catalog",
   },
   {
-    id: "home-luxury-horeca",
-    title: "Преміальна готельна поліграфія",
-    subtitle: "Шкіряні меню, папки гостя, дорхенгери та сертифікати",
-    category: "Luxury HoReCa",
-    image: "/images/cases/luxury-hospitality.jpg",
-    description: "Гаряче тиснення золотою фольгою Kurz, дизайнерські папери верже, ручна палітурна робота для готельного комплексу.",
-    badge: "Готельний преміум",
-    link: "/catalog/restaurant-menus",
-  },
-  {
-    id: "home-food-retail",
-    title: "Етикетки для харчового ритейлу",
-    subtitle: "Гірчиця, хрін, соуси, майонези та консервація",
-    category: "Retail FMCG",
-    image: "/images/labels/food-portfolio-delicco.png",
-    description: "Промислові тиражі для продуктових мереж. Стійкість до жирів, олій та глибокої заморозки з бездоганною читабельністю штрихкодів.",
-    badge: "Харчовий допуск",
-    link: "/catalog/stickers",
-  },
-  {
-    id: "home-srp-pack",
-    title: "Showbox та полично-готова упаковка",
-    subtitle: "Конструкторська розробка коробок, ложементів та дисплеїв",
-    category: "Пакування & POS",
-    image: "/images/cases/retail-srp-display.png",
-    description: "Картонні шоубокси з висічними віконцями, шелфтокери, воблери та обечайки для швидкої викладки товару на полиці супермаркетів.",
-    badge: "Ритейл упаковка",
+    id: "home-packaging-mockup",
+    title: "Пакування та коробки з індивідуальною висічкою",
+    subtitle: "Крафтові пакети, фармацевтичні пачки та преміум-косметика",
+    category: "Упаковка та розгортки",
+    image: "/images/branding/packaging-mockup-line.png",
+    description: "Індивідуальна конструкторська розробка розгорток коробок, вирубних штампів та паперових пакетів для ритейлу й фармації.",
+    badge: "Конструкторське бюро",
     link: "/catalog/boxes",
   },
   {
-    id: "home-kids-line",
-    title: "Дитячі книги, розмальовки та ігри",
-    subtitle: "Тверда палітурка 7БЦ, настільні ігри, картки та стікери",
-    category: "Книжкова мануфактура",
-    image: "/images/cases/kids-books-games.png",
-    description: "Автоматичний ниткошвейний комплекс Horizon. Безпечні фарби, розмальовки, activity books та настільні ігри для дітей.",
-    badge: "7БЦ Horizon",
-    link: "/catalog/kids-print",
+    id: "home-cosmetics-line",
+    title: "Етикетки для лінійки органічної косметики",
+    subtitle: "Флакони, баночки, туби та сироватки",
+    category: "Косметичний сектор",
+    image: "/images/branding/cosmetics-natural-line.png",
+    description: "Вологостійкі та олієстійкі плівкові етикетки з шовковистим лаком для косметичних засобів та доглядових лінійок.",
+    badge: "Стійка плівка",
+    link: "/catalog/stickers",
+  },
+  {
+    id: "home-olive-line",
+    title: "Серійні етикетки для скляної тари різного об'єму",
+    subtitle: "Масштабування дизайну від мініатюр до пляшок 1 л",
+    category: "Олії та делікатеси",
+    image: "/images/branding/olive-oil-line.png",
+    description: "Пропорційне масштабування етикеток під будь-який діаметр скляної пляшки з жиростійким покриттям.",
+    badge: "Серійний друк",
+    link: "/catalog/roll-labels",
   },
   {
     id: "home-coffee-sku",
     title: "Серійні етикетки для лінійки крафтової кави",
-    subtitle: "Єдина колірна дизайн-система для кавових пачок",
+    subtitle: "Єдина колірна дизайн-система для кавових дой-паків",
     category: "Крафтові бренди",
-    image: "/images/labels/coffee-sku-lineup.png",
+    image: "/images/branding/coffee-black-label.png",
     description: "Зручне масштабування для брендів з широким асортиментом: зміна назв, ваги, дат обсмаження та QR-кодів в одному замовленні.",
     badge: "Серійний друк",
     link: "/catalog/roll-labels",
+  },
+  {
+    id: "home-kids-line",
+    title: "Дитячі книги, розмальовки та розвиваючі ігри",
+    subtitle: "Тверда палітурка 7БЦ, настільні ігри, картки та стікери",
+    category: "Книжкова мануфактура",
+    image: "/images/cases/kids-books-games.png",
+    description: "Автоматичний ниткошвейний комплекс Horizon. Безпечні сертифіковані фарби, розмальовки, activity books та настільні ігри для дітей.",
+    badge: "7БЦ Horizon",
+    link: "/catalog/kids-print",
   },
 ];
 import {
@@ -184,24 +184,35 @@ export default function HomePage() {
         className="fixed top-0 left-0 h-[3px] bg-edelvin-blue z-50 pointer-events-none transition-all duration-150"
       />
 
-            {/* Hero Section */}
-            <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 border-b border-slate-200 bg-white">
-        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+            {/* Hero Section with Ambient Factory Video */}
+            <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 border-b border-slate-200 overflow-hidden bg-slate-950 text-white">
+        {/* Subtle Ambient Video Background */}
+        <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen filter contrast-125 brightness-95">
+          <video
+            src="/videos/plant-hero.mp4"
+            poster="/videos/plant-hero-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/85 to-slate-950 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="max-w-5xl mx-auto text-center space-y-6">
-              <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-slate-950 leading-[1.05]">
+              <span className="font-sans text-xs font-bold tracking-[0.28em] text-blue-400 uppercase inline-block">
+                ВИРОБНИЧИЙ КОМПЛЕКС ПОВНОГО ЦИКЛУ • ТОВ «АЛЬФА І ОМЕГА»
+              </span>
+
+              <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-white leading-[1.05]">
                 Якість друку. <br />
-                <span className="italic font-light text-edelvin-blue">
+                <span className="italic font-light text-blue-400">
                   Традиції та інновації.
                 </span>
               </h1>
-
-              <div className="max-w-3xl mx-auto pt-2">
-                <ScrollRevealText
-                  text="Виробничий комплекс повного циклу: виготовлення понад 1 000 000 одиниць поліграфічної продукції щомісяця — книги у твердій палітурці 7БЦ, серійні етикетки для бізнесу, упаковка з висічкою та складське постачання паперу."
-                  className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed font-normal"
-                />
-              </div>
 
               {/* Action Links */}
               <div className="pt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
@@ -211,68 +222,29 @@ export default function HomePage() {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                     setIsCatalogOpen(true);
                   }}
-                  className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 hover:text-edelvin-blue border-b-2 border-slate-950 hover:border-edelvin-blue pb-1.5 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 bg-white hover:bg-blue-400 hover:text-slate-950 px-8 py-4 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-0.5"
                 >
                   <span>Каталог продукції</span>
-                  <ArrowRight className="w-4 h-4 text-edelvin-blue" />
+                  <ArrowRight className="w-4 h-4 text-slate-950" />
                 </button>
 
                 <Link
                   href="/capabilities"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white bg-slate-950 hover:bg-edelvin-blue px-7 py-3.5 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white hover:text-blue-400 border-b-2 border-white/40 hover:border-blue-400 pb-1.5 transition-all cursor-pointer"
                 >
                   <span>Виробничі можливості B2B</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-edelvin-blue" />
+                  <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
                 </Link>
 
                 <a
                   href="#direct-contact"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-500 hover:text-slate-950 pb-1.5 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-300 hover:text-white pb-1.5 transition-all cursor-pointer"
                 >
                   <span>Консультація технолога</span>
                   <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
                 </a>
               </div>
             </div>
-
-          {/* Виробничі метрики високої точності */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-slate-200">
-            <ScrollFadeIn delay={0}>
-              <span className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-950 block">
-                ≈ 1 000 000
-              </span>
-              <span className="text-xs sm:text-sm text-slate-500 mt-2 block font-normal">
-                одиниць готової продукції щомісяця
-              </span>
-            </ScrollFadeIn>
-
-            <ScrollFadeIn delay={80}>
-              <span className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-950 block">
-                100+ SKU
-              </span>
-              <span className="text-xs sm:text-sm text-slate-500 mt-2 block font-normal">
-                в одній серійній лінійці продукції бренду
-              </span>
-            </ScrollFadeIn>
-
-            <ScrollFadeIn delay={160}>
-              <span className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-950 block">
-                ISO 9001
-              </span>
-              <span className="text-xs sm:text-sm text-slate-500 mt-2 block font-normal">
-                сертифікований контроль якості та ISO 14001
-              </span>
-            </ScrollFadeIn>
-
-            <ScrollFadeIn delay={240}>
-              <span className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-950 block">
-                27+ років
-              </span>
-              <span className="text-xs sm:text-sm text-slate-500 mt-2 block font-normal">
-                бездоганної репутації та досвіду з 1998 року
-              </span>
-            </ScrollFadeIn>
-          </div>
 
         </div>
       </section>

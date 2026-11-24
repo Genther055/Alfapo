@@ -19,6 +19,7 @@ import {
   FileSpreadsheet,
 } from "lucide-react";
 import ScrollRevealText from "@/components/ScrollRevealText";
+import FullWidthVideoSection from "@/components/FullWidthVideoSection";
 import { useLanguage } from "@/context/LanguageContext";
 
 const trustIcons = [
@@ -283,22 +284,37 @@ export default function AboutPage() {
         className="fixed top-0 left-0 h-[3px] bg-edelvin-blue z-50 pointer-events-none transition-all duration-150"
       />
 
-            {/* Hero Section */}
-            <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 border-b border-slate-200 bg-white">
-        <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+            {/* Hero Section with Ambient Video */}
+            <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 border-b border-slate-200 overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen filter contrast-125 brightness-95">
+          <video
+            src="/videos/plant-hero.mp4"
+            poster="/videos/plant-hero-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/85 to-slate-950 pointer-events-none" />
+
+        <div className="relative z-10 w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12">
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-slate-950 leading-[1.05]">
+            <span className="font-sans text-xs font-bold tracking-[0.28em] text-blue-400 uppercase inline-block mb-4">
+              ПРО ВИРОБНИЧИЙ КОМПЛЕКС • ТОВ «АЛЬФА І ОМЕГА»
+            </span>
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-white leading-[1.05]">
               {t.aboutPage.heroTitle1} <br />
-              <span className="italic font-light text-edelvin-blue">{t.aboutPage.heroTitle2}</span>
+              <span className="italic font-light text-blue-400">{t.aboutPage.heroTitle2}</span>
             </h1>
           </div>
 
           <div className="max-w-4xl mx-auto text-center py-2">
-            <ScrollRevealText
-              text={t.aboutPage.manifesto}
-              className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed font-normal"
-            />
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed font-light">
+              {t.aboutPage.manifesto}
+            </p>
           </div>
 
           {/* Action Links */}
@@ -309,26 +325,18 @@ export default function AboutPage() {
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 setIsCatalogOpen(true);
               }}
-              className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 hover:text-edelvin-blue border-b-2 border-slate-950 hover:border-edelvin-blue pb-1.5 transition-all cursor-pointer"
+              className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 bg-white hover:bg-blue-400 hover:text-slate-950 px-8 py-4 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-0.5"
             >
               <span>{t.aboutPage.catalogBtn}</span>
-              <ArrowRight className="w-4 h-4 text-edelvin-blue" />
+              <ArrowRight className="w-4 h-4 text-slate-950" />
             </button>
 
             <Link
               href="/capabilities"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 hover:text-edelvin-blue pb-1.5 transition-all cursor-pointer border-b-2 border-transparent hover:border-edelvin-blue"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white hover:text-blue-400 border-b-2 border-white/40 hover:border-blue-400 pb-1.5 transition-all cursor-pointer"
             >
-              <span>Виробничі можливості B2B</span>
-              <ArrowRight className="w-3.5 h-3.5 text-edelvin-blue" />
-            </Link>
-
-            <Link
-              href="/#direct-contact"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-500 hover:text-slate-950 pb-1.5 transition-all cursor-pointer"
-            >
-              <span>{t.aboutPage.calcBtn}</span>
-              <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+              <span>{t.header.capabilities}</span>
+              <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
             </Link>
           </div>
 

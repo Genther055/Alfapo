@@ -94,25 +94,10 @@ export default function FullWidthVideoSection({
 
         {/* Foreground Content */}
         <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 sm:p-10 lg:p-16 max-w-[1520px] mx-auto pointer-events-none">
-          {/* Top Badges */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pointer-events-auto">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gold-400/20 backdrop-blur-md border border-gold-400/40 text-gold-300 font-sans text-[11px] font-bold tracking-widest uppercase rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
-                {eyebrow}
-              </span>
-              {badges.map((b, idx) => (
-                <span
-                  key={idx}
-                  className="hidden sm:inline-block px-3 py-1 bg-black/40 backdrop-blur-md border border-white/10 text-slate-300 font-sans text-[11px] tracking-wider uppercase rounded-full"
-                >
-                  {b}
-                </span>
-              ))}
-            </div>
-
-            {/* Video Controls */}
-            <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md border border-white/15 rounded-full p-1">
+          {/* Top Controls only (clean, no strikethrough badges) */}
+          <div className="flex items-center justify-end w-full pointer-events-auto">
+            {/* Video Play/Pause Control */}
+            <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md border border-white/15 rounded-full p-1.5">
               <button
                 type="button"
                 onClick={togglePlay}
@@ -124,8 +109,8 @@ export default function FullWidthVideoSection({
             </div>
           </div>
 
-          {/* Bottom Title & Stats */}
-          <div className="pointer-events-auto max-w-4xl pt-8">
+          {/* Bottom Title & Description (Clean editorial typography, without artificial stat numbers) */}
+          <div className="pointer-events-auto max-w-4xl pb-4">
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal tracking-tight leading-[1.1] drop-shadow-md">
               {title}
             </h2>
@@ -133,21 +118,6 @@ export default function FullWidthVideoSection({
               <p className="font-sans text-sm sm:text-base lg:text-lg text-slate-200 mt-4 max-w-2xl font-light leading-relaxed drop-shadow-sm">
                 {description}
               </p>
-            )}
-
-            {stats.length > 0 && (
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8 pt-6 border-t border-white/15">
-                {stats.map((st, i) => (
-                  <div key={i} className="flex flex-col">
-                    <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-gold-300 font-normal tracking-tight">
-                      {st.value}
-                    </span>
-                    <span className="font-sans text-[11px] sm:text-xs text-slate-300 uppercase tracking-wider mt-1">
-                      {st.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
             )}
           </div>
         </div>

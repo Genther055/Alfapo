@@ -65,7 +65,7 @@ const LABEL_SHOWCASE_ITEMS: CarouselItem[] = [
     subtitle: "Масштабування від мініатюр до пляшок 1 л",
     category: "Олії та делікатеси",
     image: "/images/labels/olive-oil-lineup.png",
-    description: "Бездоганне пропорційне масштабування етикетки під будь-який діаметр пляшки з олієстійким ламінуванням.",
+    description: "Пропорційне масштабування етикетки під будь-який діаметр пляшки з олієстійким ламінуванням.",
     badge: "Масштабування лінійки",
     link: "/catalog/roll-labels",
   },
@@ -173,40 +173,37 @@ export default function CatalogPage() {
   }).filter(Boolean);
 
   return (
-    <div className="bg-white min-h-screen py-16 sm:py-24 text-slate-900 selection:bg-edelvin-blue selection:text-white">
-      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        
-        {/* Заголовок сторінки каталогу */}
-        <div className="pb-12 border-b border-slate-200">
-          <span className="font-sans text-xs font-bold tracking-[0.25em] text-edelvin-blue uppercase block mb-3">
+    <div className="bg-white min-h-screen text-slate-900 selection:bg-edelvin-blue selection:text-white">
+      
+      {/* Преміальне відео-шапка для каталогу продукції */}
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 border-b border-slate-200 overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen filter contrast-125 brightness-95">
+          <video
+            src="/videos/hero-ambient.mp4"
+            poster="/videos/hero-ambient-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/85 to-slate-950 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+          <span className="font-sans text-xs font-bold tracking-[0.28em] text-blue-400 uppercase inline-block mb-3">
             ВИРОБНИЧА НОМЕНКЛАТУРА • ПОВНИЙ ЦИКЛ ПОЛІГРАФІЇ «АЛЬФА І ОМЕГА»
           </span>
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-slate-950">
+          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-white leading-tight">
             Каталог продукції та пакувальних рішень
           </h1>
-          <p className="text-base sm:text-lg text-slate-700 font-normal mt-4 max-w-3xl leading-relaxed">
-            Серійні етикетки для брендів, книги у твердій палітурці 7БЦ, роздрібне пакування та представницька поліграфія. Власна фабрика у Вінниці площею 2 500 м² з індустріальними комплексами Konica Minolta та Horizon.
+          <p className="text-base sm:text-lg text-slate-300 font-light mt-4 max-w-3xl leading-relaxed">
+            Серійні етикетки для брендів, книги у твердій палітурці 7БЦ, роздрібне пакування та представницька поліграфія на власних індустріальних комплексах у Вінниці.
           </p>
-
-          <div className="mt-8 flex flex-wrap gap-6 pt-6 border-t border-slate-100 font-sans text-xs">
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">6 кластерів</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Основні напрямки</span>
-            </div>
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">від 1 шт</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Мінімальний тираж</span>
-            </div>
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">24 - 48 год</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Швидкий запуск тиражу</span>
-            </div>
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">100% ПДВ</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Казначейство та безготівка</span>
-            </div>
-          </div>
         </div>
+      </section>
+
+      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-12">
 
                 {/* КАРУСЕЛЬ 1: СЕРІЙНІ ЛІНІЙКИ ЕТИКЕТОК SKU                  */}
                 <section className="py-14 sm:py-18 border-b border-slate-200">

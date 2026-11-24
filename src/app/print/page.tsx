@@ -344,29 +344,44 @@ export default function PrintPage() {
         className="fixed top-0 left-0 h-[3px] bg-edelvin-blue z-50 pointer-events-none transition-all duration-150"
       />
 
-            {/* 1. HERO SECTION                                              */}
-            <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 border-b border-slate-200 bg-white">
-        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+            {/* 1. HERO SECTION WITH AMBIENT VIDEO                           */}
+            <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 border-b border-slate-200 overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen filter contrast-125 brightness-95">
+          <video
+            src="/videos/konica-digital.mp4"
+            poster="/videos/konica-digital-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/85 to-slate-950 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-slate-950 leading-[1.02]">
+            <span className="font-sans text-xs font-bold tracking-[0.28em] text-blue-400 uppercase inline-block">
+              ПОЛІГРАФІЧНИЙ ПАРК • ВЛАСНЕ ВИРОБНИЦТВО У ВІННИЦІ
+            </span>
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-white leading-[1.02]">
               Поліграфічний комплекс <br />
-              <span className="italic font-light text-edelvin-blue">
+              <span className="italic font-light text-blue-400">
                 повного виробничого циклу.
               </span>
             </h1>
 
             <div className="max-w-3xl mx-auto pt-2">
-              <ScrollRevealText
-                text="Флагманський цифровий комплекс Konica Minolta AccurioPress C7090 Enhanced із інтелектуальним контролем кольору IQ-501: фотографічна якість від 1 примірника, оперативні тиражі в день замовлення та власна палітурна база."
-                className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed font-normal"
-              />
+              <p className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed font-light">
+                Цифровий комплекс Konica Minolta AccurioPress та рулонна лінія етикетки з автоконтролем кольору IQ-501: фотографічна якість від 1 примірника та власна палітурна база.
+              </p>
             </div>
 
             <div className="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
               <Link
                 href="/capabilities#order-form"
-                className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white bg-slate-950 hover:bg-edelvin-blue px-8 py-4 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-0.5 group"
+                className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 bg-white hover:bg-blue-400 hover:text-slate-950 px-8 py-4 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-0.5 group"
               >
                 <span>Замовити консультацію накладу</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -374,10 +389,10 @@ export default function PrintPage() {
 
               <Link
                 href="/catalog"
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 hover:text-edelvin-blue border-b-2 border-slate-950 hover:border-edelvin-blue pb-1 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white hover:text-blue-400 border-b-2 border-white/40 hover:border-blue-400 pb-1.5 transition-all cursor-pointer"
               >
-                <span>Переглянути зразки у каталозі</span>
-                <ArrowRight className="w-4 h-4 text-edelvin-blue" />
+                <span>Каталог готової продукції</span>
+                <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
               </Link>
             </div>
           </div>
