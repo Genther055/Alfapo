@@ -204,7 +204,7 @@ export default function HomePage() {
           
           <div className="max-w-5xl mx-auto text-center space-y-6">
               <span className="font-sans text-xs font-bold tracking-[0.28em] text-blue-400 uppercase inline-block">
-                ВИРОБНИЧИЙ КОМПЛЕКС ПОВНОГО ЦИКЛУ • ТОВ «АЛЬФА І ОМЕГА»
+                ТОРГОВИЙ ДІМ «АЛЬФА І ОМЕГА»
               </span>
 
               <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-white leading-[1.05]">
@@ -232,7 +232,7 @@ export default function HomePage() {
                   href="/capabilities"
                   className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white hover:text-blue-400 border-b-2 border-white/40 hover:border-blue-400 pb-1.5 transition-all cursor-pointer"
                 >
-                  <span>Виробничі можливості B2B</span>
+                  <span>Виробничі можливості</span>
                   <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
                 </Link>
 

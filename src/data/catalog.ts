@@ -35,7 +35,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "1–2 робочих дні",
         minQty: 100,
         featured: true,
-        image: "/images/cases/luxury-hospitality.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Soft-Touch + Фольга",
       },
       {
@@ -69,7 +69,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Формати А3, А2, А1, А0. Інтер'єрний та офсетний друк стійкими пігментними фарбами високої роздільної здатності.",
         turnaround: "1–2 робочих дні",
         minQty: 1,
-        image: "/images/cases/retail-srp-display.png",
+        image: "/images/branding/packaging-mockup-line.png",
         badge: "1440 DPI",
       },
       {
@@ -110,7 +110,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Формат А4 на європейському папері 80–100 г/м², сумісному з усіма типами офісних лазерних і струменевих принтерів.",
         turnaround: "1–2 робочих дні",
         minQty: 200,
-        image: "/images/cases/luxury-hospitality.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Сертифікований папір",
       },
       {
@@ -122,7 +122,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "3–5 робочих днів",
         minQty: 20,
         featured: true,
-        image: "/images/cases/luxury-boutique-souvenirs.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Пружина / Тверда",
       },
       {
@@ -144,7 +144,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Під документи А4. Цупкий картон 300–350 г/м², прорізи під візитку, варіанти з цільнокроєною або вклеєною кишенею.",
         turnaround: "3–4 робочих дні",
         minQty: 50,
-        image: "/images/cases/luxury-hospitality.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Під формат А4",
       },
       {
@@ -166,7 +166,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Стандарт ISO 86×54 мм. Магнітна смуга, ембосування з золоченням, QR-коди, чипи та ламінація високої зносостійкості.",
         turnaround: "3–5 робочих днів",
         minQty: 50,
-        image: "/images/cases/luxury-boutique-souvenirs.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "ISO 86×54 мм",
       },
     ],
@@ -221,7 +221,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "4–6 робочих днів",
         minQty: 50,
         featured: true,
-        image: "/images/cases/retail-srp-display.png",
+        image: "/images/branding/packaging-mockup-line.png",
         badge: "SRP & Showbox",
       },
       {
@@ -263,7 +263,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "5–7 робочих днів",
         minQty: 10,
         featured: true,
-        image: "/images/cases/luxury-boutique-souvenirs.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "7БЦ Horizon",
       },
       {
@@ -339,7 +339,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Литий вініл Frontlit 440–510 г/м², банерна сітка Mesh для вітрових навантажень. Проклейка підгинів, встановлення металевих люверсів.",
         turnaround: "1–2 робочих дні",
         minQty: 1,
-        image: "/images/cases/retail-srp-display.png",
+        image: "/images/branding/packaging-mockup-line.png",
         badge: "Frontlit / Mesh",
       },
       {
@@ -361,7 +361,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Алюмінієві касети 80×200 см, 100×200 см, 120×200 см із сумкою для транспортування. Полотно з блокаутом, що не просвічує.",
         turnaround: "1–2 робочих дні",
         minQty: 1,
-        image: "/images/cases/retail-srp-display.png",
+        image: "/images/branding/packaging-mockup-line.png",
         badge: "Мобільні стенди",
       },
     ],
@@ -393,7 +393,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "3–4 робочих дні",
         minQty: 25,
         featured: true,
-        image: "/images/cases/luxury-hospitality.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Hotel & Resort",
       },
       {

@@ -112,7 +112,7 @@ export interface Translations {
 export const translations: Record<LanguageCode, Translations> = {
   UA: {
     header: {
-      banner: "Виробничий комплекс ТОВ «Альфа і Омега» • Вінниця, вул. 600-річчя, 17 | Безготівка з ПДВ • Казначейство",
+      banner: "Вінниця, вул. 600-річчя, 17",
       catalog: "Каталог",
       print: "Поліграфія",
       capabilities: "Можливості",
@@ -389,7 +389,7 @@ export const translations: Record<LanguageCode, Translations> = {
   },
   EN: {
     header: {
-      banner: "Production Facility LLC 'Alfa & Omega' • Vinnytsia, 17 600-richchya St. | VAT Invoicing • State Treasury",
+      banner: "Vinnytsia, 17 600-richchya St.",
       catalog: "Catalog",
       print: "Printing",
       capabilities: "Capabilities",
@@ -660,7 +660,7 @@ export const translations: Record<LanguageCode, Translations> = {
   },
   PL: {
     header: {
-      banner: "Zakład Produkcyjny Sp. z o.o. «Alfa i Omega» • Winnica, ul. 600-lecia 17 | Faktury VAT • Płatności skarbowe",
+      banner: "Winnica, ul. 600-lecia 17",
       catalog: "Katalog",
       print: "Poligrafia",
       capabilities: "Możliwości",
@@ -931,7 +931,7 @@ export const translations: Record<LanguageCode, Translations> = {
   },
   DE: {
     header: {
-      banner: "Produktionskomplex GmbH 'Alfa & Omega' • Winnyzja, 600-Jahre-Str. 17 | MwSt.-Abrechnung • Staatskasse",
+      banner: "Winnyzja, 600-Jahre-Str. 17",
       catalog: "Katalog",
       print: "Druckerei",
       capabilities: "Möglichkeiten",
