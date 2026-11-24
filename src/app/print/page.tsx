@@ -507,6 +507,21 @@ export default function PrintPage() {
         </div>
       </section>
 
+      {/* ВІДЕО НА ВСЮ ШИРИНУ: ДРУК НА KONICA MINOLTA ТА АВТОМАТИЧНА ПОДАЧА */}
+      <FullWidthVideoSection
+        videoSrc="/videos/konica-digital.mp4"
+        posterSrc="/videos/konica-digital-poster.jpg"
+        eyebrow="ЦИФРОВИЙ КОМПЛЕКС KONICA MINOLTA"
+        title="Швидкісний друк високої чіткості та автоматичний контроль"
+        description="Флагманська продуктивність цифрового друку зі швидкістю понад 70 сторінок за хвилину. Тонер полімеризованого типу Simitri V забезпечує чіткі лінії креслень, соковиту плашку та глибокий матовий блиск без відблисків."
+        stats={[
+          { label: "Роздільна здатність", value: "3600 × 2400 DPI" },
+          { label: "Щільність паперу", value: "до 400 г/м²" },
+          { label: "Контроль кольору", value: "IQ-501 спектро" },
+          { label: "Готовність першого відбитка", value: "від 15 хв" },
+        ]}
+      />
+
             {/* Production Lines */}
             <section className="py-20 lg:py-28 border-b border-slate-200 bg-white">
         <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">

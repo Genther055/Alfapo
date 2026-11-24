@@ -196,29 +196,46 @@ export default function CapabilitiesPage() {
         className="fixed top-0 left-0 h-[3px] bg-edelvin-blue z-50 pointer-events-none transition-all duration-150"
       />
 
-            {/* Hero Section */}
-            <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 border-b border-slate-200 bg-white">
-        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+            {/* Hero Section with Ambient Factory Video */}
+            <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 border-b border-slate-200 overflow-hidden bg-slate-950 text-white">
+        {/* Subtle Ambient Video Background */}
+        <div className="absolute inset-0 pointer-events-none opacity-30 mix-blend-screen filter contrast-125 brightness-90">
+          <video
+            src="/videos/hero-ambient.mp4"
+            poster="/videos/hero-ambient-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/85 to-slate-950 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <div className="max-w-5xl mx-auto text-center space-y-7">
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-slate-950 leading-[1.02]">
+            <span className="font-sans text-xs font-bold tracking-[0.28em] text-blue-400 uppercase inline-block">
+              ПОВНИЙ ЦИКЛ ПОЛІГРАФІЇ ТА РУЛОННОЇ ЕТИКЕТКИ • ТОВ «АЛЬФА І ОМЕГА»
+            </span>
+
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-tight text-white leading-[1.02]">
               Одна виробнича база. <br />
-              <span className="italic font-light text-edelvin-blue">
+              <span className="italic font-light text-blue-400">
                 Рішення для різних ринків.
               </span>
             </h1>
 
             <div className="max-w-3xl mx-auto pt-2">
-              <ScrollRevealText
-                text="Від макета до серійної лінійки."
-                className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed font-normal"
-              />
+              <p className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed font-light">
+                Від інженерного макета до багатотисячної серійної лінійки без посередників.
+              </p>
             </div>
 
             <div className="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
               <a
                 href="#order-form"
-                className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white bg-slate-950 hover:bg-edelvin-blue px-8 py-4 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-0.5 group"
+                className="inline-flex items-center gap-3 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 bg-white hover:bg-blue-400 hover:text-slate-950 px-8 py-4 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-0.5 group"
               >
                 <span>Підібрати рішення під продукт</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -226,7 +243,7 @@ export default function CapabilitiesPage() {
 
               <a
                 href="#solutions"
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-slate-950 hover:text-edelvin-blue border-b-2 border-slate-950 hover:border-edelvin-blue pb-1 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white hover:text-blue-400 border-b-2 border-white/40 hover:border-blue-400 pb-1 transition-all cursor-pointer"
               >
                 <span>Каталог зразків за категоріями</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -235,7 +252,7 @@ export default function CapabilitiesPage() {
           </div>
 
           {/* Capability Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 mt-20 pt-12 border-t border-slate-200">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 mt-20 pt-12 border-t border-white/15">
             {[
               { title: "Харчові продукти", anchor: "#food" },
               { title: "Напої", anchor: "#drinks" },
@@ -247,13 +264,14 @@ export default function CapabilitiesPage() {
               <ScrollFadeIn key={market.title} delay={idx * 60}>
                 <a
                   href={market.anchor}
-                  className="p-6 bg-white border border-slate-200 hover:border-slate-950 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 rounded-xs flex flex-col justify-between group text-left cursor-pointer h-full"
+                  className="p-6 bg-slate-900/80 backdrop-blur-xs border border-white/10 hover:border-blue-400 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 rounded-xs flex flex-col justify-between group text-left cursor-pointer h-full"
                 >
-                  <div className="flex justify-end mb-6">
-                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-edelvin-blue group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                  </div>
-                  <span className="font-serif text-xl sm:text-2xl text-slate-950 block leading-snug group-hover:text-edelvin-blue transition-colors">
+                  <span className="font-serif text-lg sm:text-xl text-white group-hover:text-blue-400 transition-colors">
                     {market.title}
+                  </span>
+                  <span className="font-sans text-[11px] text-slate-400 uppercase tracking-wider mt-4 flex items-center gap-1 group-hover:text-white transition-colors">
+                    <span>Дивитись</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
                 </a>
               </ScrollFadeIn>
@@ -471,6 +489,21 @@ export default function CapabilitiesPage() {
 
           </div>
         </section>
+
+        {/* ВІДЕО-ПРОЦЕС: КОМПЛЕКС РУЛОННОЇ ЕТИКЕТКИ VOREY VD3350 ТА KONICA MINOLTA */}
+        <FullWidthVideoSection
+          videoSrc="/videos/roll-label-vorey.mp4"
+          posterSrc="/videos/roll-label-vorey-poster.jpg"
+          eyebrow="ЦИФРОВИЙ РУЛОННИЙ ДРУК ТА ФІГУРНА ВИСІЧКА"
+          title="Промислова фінішна лінія етикетки Vorey VD3350"
+          description="Повний цикл виробництва самоклейної етикетки в рулонах: ламінування в лінію, цифрова контурна висічка зняттям облою та автоматична розпускна намотка на втулку. Ідеально підходить для швидкісних автоматичних аплікаторів на лініях розливу."
+          stats={[
+            { label: "Формат висічки", value: "Будь-яка форма" },
+            { label: "Швидкість лінії", value: "до 18 м/хв" },
+            { label: "Ширина рулону", value: "до 330 мм" },
+            { label: "Контроль натягу", value: "Електронний" },
+          ]}
+        />
 
         {/* Розділ: Серійні лінійки SKU */}
         <section id="sku" className="py-20 lg:py-28 border-b border-slate-200 bg-white">
