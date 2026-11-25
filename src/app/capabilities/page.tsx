@@ -1138,10 +1138,10 @@ export default function CapabilitiesPage() {
             <section id="order-form" className="py-24 lg:py-32 bg-slate-950 text-white scroll-mt-20">
         <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
             
             {/* Текст та контакти: строго Білий, Чорний, Синій */}
-            <div className="lg:col-span-5 space-y-10">
+            <div className="lg:col-span-5 flex flex-col justify-between py-2 space-y-10">
               <ScrollFadeIn>
                 <div>
                   <h2 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-normal text-white tracking-tight leading-[1.02]">
@@ -1204,7 +1204,7 @@ export default function CapabilitiesPage() {
             </div>
 
             {/* Сучасна біла форма */}
-            <div className="lg:col-span-7 bg-white text-slate-900 p-8 sm:p-14 rounded-xs shadow-2xl">
+            <div className="lg:col-span-7 bg-white text-slate-900 p-8 sm:p-14 rounded-xs shadow-2xl flex flex-col justify-between">
               {formSubmitted ? (
                 <div className="py-16 text-center space-y-5">
                   <div className="w-16 h-16 bg-slate-950 text-white rounded-full flex items-center justify-center mx-auto">

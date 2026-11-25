@@ -47,7 +47,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "1–2 робочих дні",
         minQty: 100,
         featured: true,
-        image: "/images/cases/luxury-wedding-events.jpg",
+        image: "/images/branding/horeca-local-branding.png",
         badge: "Konica Minolta",
       },
       {
@@ -58,7 +58,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Ліфлети з 1 чи 2 фальцями гармошка чи намотка. Автоматичне бігування та фальцювання Horizon до 10 фальців.",
         turnaround: "2–3 робочих дні",
         minQty: 50,
-        image: "/images/cases/luxury-resort-navigation.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "До 10 фальців",
       },
       {
@@ -91,7 +91,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Нанесення захисного скретч-шару під монетку, генерація унікальних промокодів та пін-кодів для акцій.",
         turnaround: "3–4 робочих дні",
         minQty: 500,
-        image: "/images/cases/gift-box-cards.png",
+        image: "/images/branding/packaging-mockup-line.png",
         badge: "Скретч-покриття",
       },
     ],
@@ -155,7 +155,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Формати євро DL, С5, С4 з відривною силіконовою стрічкою, друк у 1–4 кольори або шовкодрук на дизайнерських паперах.",
         turnaround: "2–3 робочих дні",
         minQty: 100,
-        image: "/images/cases/luxury-wedding-events.jpg",
+        image: "/images/branding/horeca-local-branding.png",
         badge: "Преміум конверти",
       },
       {
@@ -275,7 +275,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "3–5 робочих днів",
         minQty: 25,
         featured: true,
-        image: "/images/cases/luxury-resort-navigation.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "FOGRA39 IQ-501",
       },
       {
@@ -287,7 +287,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "4–6 робочих днів",
         minQty: 50,
         featured: true,
-        image: "/images/cases/kids-books-games.png",
+        image: "/images/branding/carton-dieline-packaging.png",
         badge: "Kids & Games",
       },
       {
@@ -298,7 +298,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Листовий друк Dominant 744 та Roland для періодики тиражами від 500 до 50 000+ примірників. Вигідна собівартість одиниці.",
         turnaround: "5–7 робочих днів",
         minQty: 500,
-        image: "/images/cases/luxury-restaurant-menu.jpg",
+        image: "/images/branding/wine-label-textured.png",
         badge: "Dominant 744",
       },
       {
@@ -328,7 +328,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Натуральне бавовняне полотно, стійкі екосольвентні фарби без запаху, галерейна натяжка на дерев'яний підрамник.",
         turnaround: "1–2 робочих дні",
         minQty: 1,
-        image: "/images/cases/luxury-resort-navigation.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Бавовняне полотно",
       },
       {
@@ -350,7 +350,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Основа з ПВХ-пластику 3–5 мм або композиту. Стійкість до перепадів температури, ультрафіолету та опадів. Настільні та фасадні рішення.",
         turnaround: "2–3 робочих дні",
         minQty: 1,
-        image: "/images/cases/luxury-resort-navigation.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Композит / ПВХ",
       },
       {
@@ -381,7 +381,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "2–4 робочих дні",
         minQty: 5,
         featured: true,
-        image: "/images/cases/luxury-restaurant-menu.jpg",
+        image: "/images/branding/wine-label-textured.png",
         badge: "Luxury HoReCa",
       },
       {
@@ -404,7 +404,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Квартальні 3-блочні з віконцем-курсором, настінні перекидні на пружині А3/А2, настільні будиночки, кишенькові календарики.",
         turnaround: "3–5 робочих днів",
         minQty: 20,
-        image: "/images/cases/luxury-resort-navigation.jpg",
+        image: "/images/branding/alfa-omega-showcase.png",
         badge: "Квартальні / Перекидні",
       },
       {
@@ -415,7 +415,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         shortDesc: "Акрилові або плоскі вінілові магніти з ламінацією. Будь-які розміри та форми для туризму та промо.",
         turnaround: "2–3 робочих дні",
         minQty: 50,
-        image: "/images/cases/gift-box-cards.png",
+        image: "/images/branding/packaging-mockup-line.png",
         badge: "Вініл / Акрил",
       },
       {
@@ -427,7 +427,7 @@ export const CATALOG_CLUSTERS: CatalogCluster[] = [
         turnaround: "Відправка в день замовлення",
         minQty: 1,
         featured: true,
-        image: "/images/cases/luxury-spa-cosmetics.jpg",
+        image: "/images/branding/cosmetics-natural-line.png",
         badge: "Зразки для B2B",
       },
     ],

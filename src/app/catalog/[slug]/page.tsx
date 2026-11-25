@@ -74,7 +74,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       shortDesc: "Професійне виготовлення поліграфічної продукції у друкарні «Альфа і Омега».",
       turnaround: "1–2 робочих дні",
       minQty: 100,
-      image: "/images/cases/luxury-hospitality.jpg",
+      image: "/images/branding/alfa-omega-showcase.png",
     };
     currentCluster = CATALOG_CLUSTERS[0];
   }
@@ -83,7 +83,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     .filter((item) => item.slug !== product?.slug)
     .slice(0, 3) || [];
 
-  const productImage = product.image || "/images/cases/luxury-hospitality.jpg";
+  const productImage = product.image || "/images/branding/alfa-omega-showcase.png";
 
   return (
     <div className="bg-white min-h-screen py-16 sm:py-24 text-slate-900 selection:bg-edelvin-blue selection:text-white">

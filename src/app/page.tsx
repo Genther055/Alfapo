@@ -62,14 +62,14 @@ const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
     link: "/catalog/roll-labels",
   },
   {
-    id: "home-kids-line",
-    title: "Дитячі книги, розмальовки та розвиваючі ігри",
-    subtitle: "Тверда палітурка 7БЦ, настільні ігри, картки та стікери",
-    category: "Книжкова мануфактура",
-    image: "/images/cases/kids-books-games.png",
-    description: "Автоматичний ниткошвейний комплекс Horizon. Безпечні сертифіковані фарби, розмальовки, activity books та настільні ігри для дітей.",
-    badge: "7БЦ Horizon",
-    link: "/catalog/kids-print",
+    id: "home-craft-bottles",
+    title: "Преміальні серійні етикетки для напоїв та олій",
+    subtitle: "Флакони, скло, крафтові серії та фігурна висічка",
+    category: "Напої та преміум-сегмент",
+    image: "/images/branding/craft-beverage-bottles.png",
+    description: "Промисловий друк на текстурованих паперах верже, металізованих плівках та нанесення вибіркового лаку Kurz для винної та крафтової продукції.",
+    badge: "AccurioLabel 400",
+    link: "/catalog/roll-labels",
   },
 ];
 import {
@@ -214,6 +214,10 @@ export default function HomePage() {
                 </span>
               </h1>
 
+              <p className="font-sans text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                Одна виробнича база. Рішення для різних ринків: від макета до серійної лінійки.
+              </p>
+
               {/* Action Links */}
               <div className="pt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
                 <button
@@ -253,15 +257,8 @@ export default function HomePage() {
       <FullWidthVideoSection
         videoSrc="/videos/plant-hero.mp4"
         posterSrc="/videos/plant-hero-poster.jpg"
-        eyebrow="ВИРОБНИЧІ ЛІНІЇ В ДІЇ • ВІННИЦЯ"
         title="Автоматизовані лінії та індустріальні комплекси"
         description="Повний цикл поліграфії без посередників: автоматична лінія виготовлення твердої палітурки 7БЦ, прецизійні ниткошвейні комплекси, цифровий рулонний друк та контурна висічка."
-        stats={[
-          { label: "Площа виробництва", value: "2 500 м²" },
-          { label: "Швидкість ліній", value: "до 5 000/год" },
-          { label: "Власна база верстатів", value: "24 одиниці" },
-          { label: "Контроль тиражу", value: "100% ВТК" },
-        ]}
       />
 
             {/* 2. СІТКА НАПРЯМІВ ВИРОБНИЦТВА (CAPABILITIES ARCHITECTURE) */}
@@ -352,26 +349,26 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             
-            {/* Кейс 1: Luxury HoReCa & Палітурка */}
+            {/* Кейс 1: Представницька поліграфія та упаковка */}
             <ScrollFadeIn delay={0}>
               <div className="space-y-4 group">
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border border-slate-200 group-hover:border-slate-950 transition-colors rounded-xs shadow-xs">
                   <Image
-                    src="/images/cases/luxury-hospitality.jpg"
-                    alt="Преміальна готельна поліграфія"
+                    src="/images/branding/alfa-omega-showcase.png"
+                    alt="Фірмова продукція та пакування Альфа і Омега"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-xs font-sans font-bold tracking-wider text-slate-400 uppercase block">
-                    Luxury HoReCa &amp; Готелі
+                    Представницька поліграфія
                   </span>
                   <h4 className="font-serif text-2xl sm:text-3xl font-normal text-slate-950 group-hover:text-edelvin-blue transition-colors">
-                    Папки гостя, меню та сертифікати
+                    Фірмові пакети, коробки та розгортки
                   </h4>
                   <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
-                    Фактурна екошкіра, гаряче тиснення золотою фольгою Kurz, дизайнерські папери верже та персоналізовані welcome-комплекти.
+                    Преміальні крафтові пакети, жорсткі коробки з ложементом, гаряче тиснення золотою фольгою та персоналізовані welcome-набори.
                   </p>
                 </div>
               </div>
@@ -382,8 +379,8 @@ export default function HomePage() {
               <div className="space-y-4 group">
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border border-slate-200 group-hover:border-slate-950 transition-colors rounded-xs shadow-xs">
                   <Image
-                    src="/images/production/roll-label-machine.png"
-                    alt="Промислова рулонна лінія Konica Minolta AccurioLabel 400"
+                    src="/images/branding/beverage-wine-collection.png"
+                    alt="Серійні рулонні етикетки для скляної тари"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
@@ -396,32 +393,32 @@ export default function HomePage() {
                     Рулонні етикетки для ліній розливу
                   </h4>
                   <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
-                    AccurioLabel 400 + плотер Scorpio Vorey: нанесення на пляшки, пакети та банки. Стійкість до вологи, олій та глибокого холоду.
+                    AccurioLabel 400 + плотер Scorpio Vorey: нанесення на пляшки, флакони та банки. Стійкість до вологи, олій та глибокого холоду.
                   </p>
                 </div>
               </div>
             </ScrollFadeIn>
 
-            {/* Кейс 3: Showbox SRP та упаковка */}
+            {/* Кейс 3: Конструкторські коробки та розгортки */}
             <ScrollFadeIn delay={160}>
               <div className="space-y-4 group">
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border border-slate-200 group-hover:border-slate-950 transition-colors rounded-xs shadow-xs">
                   <Image
-                    src="/images/cases/retail-srp-display.png"
-                    alt="Шоубокси та упаковка SRP для супермаркетів"
+                    src="/images/branding/carton-dieline-packaging.png"
+                    alt="Пакування та індивідуальні розгортки коробок"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-xs font-sans font-bold tracking-wider text-slate-400 uppercase block">
-                    Retail Packaging &amp; POS
+                    Конструкторське пакування
                   </span>
                   <h4 className="font-serif text-2xl sm:text-3xl font-normal text-slate-950 group-hover:text-edelvin-blue transition-colors">
-                    Showbox та поліграфічні комплекти
+                    Коробки з висічкою та розгортки
                   </h4>
                   <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
-                    Конструкторська розробка шоубоксів, ложементів, воблерів та шелфтокерів для швидкого та ефектного представлення продукту в ритейлі.
+                    Конструкторська розробка геометрії коробок, вирубних штампів, ложементів та обгорток для надійного представлення продукту в ритейлі.
                   </p>
                 </div>
               </div>
@@ -652,10 +649,10 @@ export default function HomePage() {
         <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
           <ScrollFadeIn>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
               
-              {/* Ліва колонка: Інформація та прямі контакти */}
-              <div className="lg:col-span-4 space-y-8">
+              {/* Ліва колонка: Інформація та прямі контакти на всю висоту форми */}
+              <div className="lg:col-span-4 flex flex-col justify-between py-2">
                 <div>
                   <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-950 tracking-tight leading-[1.08]">
                     {t.contactSection.title}
@@ -666,7 +663,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Прямі контакти: Номери в колонку */}
-                <div className="pt-8 border-t border-slate-200 space-y-6">
+                <div className="pt-8 border-t border-slate-200 space-y-6 mt-8 lg:mt-auto">
                   <div>
                     <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-3 font-bold">
                       {t.contactSection.phoneDept}
@@ -722,7 +719,7 @@ export default function HomePage() {
               </div>
 
               {/* Права колонка: Форма */}
-              <div className="lg:col-span-8 bg-white border border-slate-200 shadow-xl p-8 sm:p-12 rounded-xs">
+              <div className="lg:col-span-8 bg-white border border-slate-200 shadow-xl p-8 sm:p-12 rounded-xs flex flex-col justify-between">
                 {formSubmitted ? (
                   <div className="py-16 text-center space-y-4">
                     <div className="w-14 h-14 rounded-full bg-slate-950 text-white flex items-center justify-center mx-auto">

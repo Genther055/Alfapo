@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 # Prototypes & local scratch
 /prototypes
+public/extracted_pptx/
+scripts/
+

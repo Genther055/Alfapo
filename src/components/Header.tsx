@@ -59,7 +59,7 @@ const PRODUCTION_DIRECTIONS: CatalogDirection[] = [
     shortDesc: "Класична тверда палітурка 7БЦ, м'яка обкладинка та ниткошвейка",
     badge: "7БЦ • PUR-клей • Ниткошвейка НШС",
     specs: "Палітурний картон 1.5–3.0 мм, лясе, каптал, золоте тиснення фольгою",
-    image: "/images/cases/luxury-restaurant-menu.jpg",
+    image: "/images/branding/wine-label-textured.png",
     items: [
       { name: "Книги у твердій палітурці 7БЦ", detail: "Ниткошвейний блок, прямий або круглений корінець, лясе", minQty: "50 шт", turnaround: "5–7 днів", slug: "books-hardcover" },
       { name: "Книги у м'якій обкладинці PUR", detail: "Високоміцний поліуретановий клей, розгортання на 180°", minQty: "50 шт", turnaround: "3–4 дні", slug: "books-soft" },
@@ -76,7 +76,7 @@ const PRODUCTION_DIRECTIONS: CatalogDirection[] = [
     shortDesc: "Комерційна поліграфія для продажів, виставок та презентацій",
     badge: "Цифра Konica Minolta • Лазер SRA3",
     specs: "Формати від 90×50 мм до А1, точна передача фірмових Pantone кольорів",
-    image: "/images/cases/fest-limited-edition.jpg",
+    image: "/images/branding/craft-beverage-bottles.png",
     items: [
       { name: "Візитівки представницькі", detail: "Картон 350 г/м², Soft-Touch, вибірковий УФ-лак, тиснення Kurz", minQty: "100 шт", turnaround: "24 год", slug: "business-cards" },
       { name: "Листівки та рекламні флаєри", detail: "Формати А6, А5, А4, Євро (210×100 мм), офсетний тираж", minQty: "100 шт", turnaround: "24 год", slug: "flyers" },
@@ -93,7 +93,7 @@ const PRODUCTION_DIRECTIONS: CatalogDirection[] = [
     shortDesc: "Спеціалізована номенклатура: від сигнального зразка до серій SKU",
     badge: "Серійність десятків SKU • ПДВ 20%",
     specs: "Харчопром, Напої, HoReCa, Фарма, Косметика, Агро — договори та казначейство",
-    image: "/images/cases/retail-srp-display.png",
+    image: "/images/branding/carton-dieline-packaging.png",
     items: [
       { name: "Харчова та винна поліграфія", detail: "Серійні етикетки для лінійок продукції, термочеки", minQty: "500 шт", turnaround: "2–3 дні", slug: "stickers" },
       { name: "Ресторанні меню HoReCa", detail: "Вологостійка матова ламінація, пружинне кріплення, сети", minQty: "10 шт", turnaround: "24–48 год", slug: "menu" },
@@ -110,7 +110,7 @@ const PRODUCTION_DIRECTIONS: CatalogDirection[] = [
     shortDesc: "Рулонний інтер'єрний та екстер'єрний друк стійкими фарбами",
     badge: "Ширина до 3.2 м • Плотерна висічка",
     specs: "Литий банер 440–510 г/м², художній холст, плівка Oracal, пластик ПВХ",
-    image: "/images/cases/luxury-resort-navigation.jpg",
+    image: "/images/branding/alfa-omega-showcase.png",
     items: [
       { name: "Банери литі та ламіновані", detail: "Встановлення люверсів по периметру, посилення краю", minQty: "1 шт", turnaround: "24 год", slug: "banners" },
       { name: "Картини та фото на холсті", detail: "Натуральне полотно, галерейна натяжка на дерев'яний підрамник", minQty: "1 шт", turnaround: "24–48 год", slug: "canvas" },
@@ -127,7 +127,7 @@ const PRODUCTION_DIRECTIONS: CatalogDirection[] = [
     shortDesc: "Пряме відвантаження зі складу друкарні у Вінниці: папір, бланки, архів",
     badge: "Вінниця, 600-річчя, 17 • Самовивіз",
     specs: "Офісний папір А4/А3, бланки МОН, папки-реєстратори, госптовари",
-    image: "/images/cases/kids-books-games.png",
+    image: "/images/branding/packaging-mockup-line.png",
     items: [
       { name: "Папір офісний А4 та А3", detail: "Клас C+, 80 г/м², білизна CIE 146%, пачки по 500 аркушів. Опт", minQty: "1 пачка", turnaround: "В наявності", slug: "paper" },
       { name: "Шкільні журнали 1–4 та 5–11 класів", detail: "Тверда зносостійка палітурка, офіційний зразок МОН України", minQty: "1 шт", turnaround: "В наявності", slug: "journals" },
