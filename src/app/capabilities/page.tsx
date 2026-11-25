@@ -462,25 +462,25 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції з паралакс-ефектом та збільшенням */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/capabilities/do-borshchu.png"
+                src="/images/capabilities/mockup-spirits-gold.jpg"
                 alt="Етикетка для міцних напоїв"
                 title="Етикетка для міцних напоїв"
                 sub="Вологостійка основа • Глибокий темний друк"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/craftsad.png"
+                src="/images/capabilities/mockup-craft-distillery.jpg"
                 alt="Фігурна етикетка для дистилерії"
                 title="Фігурна етикетка для дистилерії"
                 sub="Кругова контурна висічка • Крафтовий стиль"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/meatballs.png"
+                src="/images/capabilities/mockup-food-retail.jpg"
                 alt="Етикетка для напівфабрикатів"
                 title="Етикетка для напівфабрикатів"
                 sub="Стійкість до конденсату та низьких температур"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/herring.png"
+                src="/images/capabilities/mockup-seafood-gourmet.jpg"
                 alt="Етикетка для рибної продукції"
                 title="Етикетка для рибної продукції"
                 sub="Стійкість до жирів, розсолів та вологи"
@@ -497,12 +497,6 @@ export default function CapabilitiesPage() {
           eyebrow="ЦИФРОВИЙ РУЛОННИЙ ДРУК ТА ФІГУРНА ВИСІЧКА"
           title="Промислова фінішна лінія етикетки Vorey VD3350"
           description="Повний цикл виробництва самоклейної етикетки в рулонах: ламінування в лінію, цифрова контурна висічка зняттям облою та автоматична розпускна намотка на втулку. Ідеально підходить для швидкісних автоматичних аплікаторів на лініях розливу."
-          stats={[
-            { label: "Формат висічки", value: "Будь-яка форма" },
-            { label: "Швидкість лінії", value: "до 18 м/хв" },
-            { label: "Ширина рулону", value: "до 330 мм" },
-            { label: "Контроль натягу", value: "Електронний" },
-          ]}
         />
 
         {/* Розділ: Серійні лінійки SKU */}
@@ -569,28 +563,28 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/capabilities/oil-bottles.png"
+                src="/images/branding/sku-series-olive-oil.png"
                 alt="Серійна лінійка для скляної тари"
                 title="Серійна лінійка для скляної тари"
                 sub="Єдина дизайн-система для пляшок різного об'єму"
                 aspect="aspect-[4/3]"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/cosmetics-line.png"
+                src="/images/branding/cosmetics-dispensers-line.png"
                 alt="Комплексна лінійка для косметики"
                 title="Комплексна лінійка для косметики"
                 sub="Флакони, баночки, тубуси та дозатори"
                 aspect="aspect-[4/3]"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/coffee-bags.png"
+                src="/images/branding/coffee-black-label.png"
                 alt="Етикетки для фольгованих пакетів"
                 title="Етикетки для фольгованих пакетів"
                 sub="Диференціація сортів у серійній лінійці"
                 aspect="aspect-[4/3]"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/cake-labels.png"
+                src="/images/capabilities/mockup-bakery-patisserie.jpg"
                 alt="Кондитерська фігурна висічка"
                 title="Кондитерська фігурна висічка"
                 sub="Складна геометрія для коробок та упаковок"
@@ -649,25 +643,25 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/capabilities/chersegi-wine.png"
+                src="/images/branding/wine-label-textured.png"
                 alt="Преміальна винна етикетка"
                 title="Преміальна винна етикетка"
                 sub="Винний фактурний папір • Тиснення"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/kvas-khlibnyi.png"
+                src="/images/branding/craft-beverage-bottles.png"
                 alt="Фігурна етикетка для напоїв"
                 title="Фігурна етикетка для напоїв"
                 sub="Складний висічний контур • Живе бродіння"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/saperavi-wine.png"
+                src="/images/branding/beverage-wine-collection.png"
                 alt="Класична гравірована етикетка"
                 title="Класична гравірована етикетка"
                 sub="Прецизійна передача півтонів для вин"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/berry-mors.png"
+                src="/images/branding/sku-series-beverages.png"
                 alt="Етикетка для натуральних напоїв"
                 title="Етикетка для натуральних напоїв"
                 sub="Крафтова основа • Пастельна гама"
@@ -721,25 +715,25 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/capabilities/tanto-sushi.png"
+                src="/images/capabilities/mockup-delivery-box.jpg"
                 alt="Стікери для доставки та пакування"
                 title="Стікери для доставки та пакування"
                 sub="QR-код для переходу в онлайн-замовлення"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/microgreens.png"
+                src="/images/capabilities/mockup-organic-produce.jpg"
                 alt="Етикетка для свіжої агропродукції"
                 title="Етикетка для свіжої агропродукції"
                 sub="Стійкість до вологи в холодильних вітринах"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/amaranth-gold.png"
+                src="/images/branding/spirits-gold-foil.png"
                 alt="Металізована золота етикетка"
                 title="Металізована золота етикетка"
                 sub="Тиснення фольгою для снекової продукції"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/osvita-badge.png"
+                src="/images/branding/horeca-local-branding.png"
                 alt="Багатоколірна контурна емблема"
                 title="Багатоколірна контурна емблема"
                 sub="Точна плотерна висічка складної форми"
@@ -756,12 +750,6 @@ export default function CapabilitiesPage() {
           eyebrow="КНИЖКОВО-ЖУРНАЛЬНА МАНУФАКТУРА 7БЦ"
           title="Автоматичне ниткошвейне скріплення блоків"
           description="Швидкісна промислова лінія Horizon та НШС забезпечує надійне зшивання книжкових блоків нитками з подальшим обтисканням на гідравлічних пресах. Жодних випадкових розпадів блоку навіть при щоденному навантаженні."
-          stats={[
-            { label: "Точність стібка", value: "±0.1 мм" },
-            { label: "Обсяг блоку", value: "до 800 сторінок" },
-            { label: "Тип палітурки", value: "Класична 7БЦ" },
-            { label: "Стійкість", value: "10+ років" },
-          ]}
         />
 
         {/* Розділ: Косметика, масла та непродовольчі товари */}
@@ -808,25 +796,25 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/capabilities/shell-oil.png"
+                src="/images/capabilities/mockup-motor-oil.jpg"
                 alt="Сервісна регламентна наліпка"
                 title="Сервісна регламентна наліпка"
                 sub="Маслостійка основа з полями під запис"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/castrol-oil.png"
+                src="/images/capabilities/mockup-automotive-fluid.jpg"
                 alt="Технічна наліпка для автоіндустрії"
                 title="Технічна наліпка для автоіндустрії"
                 sub="Стійкість до агресивних рідин та тертя"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/multibox.png"
+                src="/images/branding/glass-jars-cosmetic.png"
                 alt="Широкоформатна етикетка для пластику"
                 title="Широкоформатна етикетка для пластику"
                 sub="Посилена адгезія до боксів та контейнерів"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/cosmetic-strip.png"
+                src="/images/branding/serum-dropper-bottles.png"
                 alt="Спеціалізована тонка смуга"
                 title="Спеціалізована тонка смуга"
                 sub="Для вузьких флаконів, тубусів та помад"
@@ -880,21 +868,21 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ScrollParallaxCard
-                src="/images/capabilities/greenmarket-bag.png"
+                src="/images/branding/alfa-omega-showcase.png"
                 alt="Брендований крафтовий пакет"
                 title="Брендований крафтовий пакет"
                 sub="Цупкий крафт-папір • Кручені ручки"
                 aspect="aspect-[3/4]"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/paracetamol-box.png"
+                src="/images/capabilities/mockup-pharma-box.jpg"
                 alt="Фармацевтична коробка та розгортка"
                 title="Фармацевтична коробка та розгортка"
                 sub="Точне фальцювання • Замкові клапани"
                 aspect="aspect-[3/4]"
               />
               <ScrollParallaxCard
-                src="/images/capabilities/lumina-box.png"
+                src="/images/branding/carton-dieline-packaging.png"
                 alt="Преміальне картонне пакування"
                 title="Преміальне картонне пакування"
                 sub="Матова тактильна поверхня для косметики"
@@ -1018,12 +1006,6 @@ export default function CapabilitiesPage() {
           eyebrow="СКЛАДСЬКА ЛОГІСТИКА ТА ПАЛЕТУВАННЯ"
           title="Захищене пакування та автоматизоване стрейчування"
           description="Кожна партія продукції пакується у вологозахисні короби та автоматично обмотується на палетувальній лінії. Гарантована цілісність тиражу при міжрегіональній доставці власним автопарком або кур'єрськими службами."
-          stats={[
-            { label: "Захист тиражу", value: "3-шаровий" },
-            { label: "Швидкість відвантаження", value: "від 24 год" },
-            { label: "Власний автопарк", value: "до 5 тонн" },
-            { label: "Доставка по Україні", value: "1-2 дні" },
-          ]}
         />
 
             {/* 6. ISO ТА ЧОМУ ЦЕ ПРАЦЮЄ ДЛЯ B2B                             */}
