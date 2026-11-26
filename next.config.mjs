@@ -4,6 +4,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/print',
+        destination: '/products',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

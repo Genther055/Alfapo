@@ -8,6 +8,7 @@ export interface Translations {
   header: {
     banner: string;
     catalog: string;
+    products: string;
     print: string;
     capabilities: string;
     shop: string;
@@ -114,7 +115,8 @@ export const translations: Record<LanguageCode, Translations> = {
     header: {
       banner: "Вінниця, вул. 600-річчя, 17",
       catalog: "Каталог",
-      print: "Поліграфія",
+      products: "Продукція",
+      print: "Продукція",
       capabilities: "Можливості",
       shop: "Магазин",
       about: "Про нас",
@@ -391,7 +393,8 @@ export const translations: Record<LanguageCode, Translations> = {
     header: {
       banner: "Vinnytsia, 17 600-richchya St.",
       catalog: "Catalog",
-      print: "Printing",
+      products: "Products",
+      print: "Products",
       capabilities: "Capabilities",
       shop: "Shop",
       about: "About Us",
@@ -662,7 +665,8 @@ export const translations: Record<LanguageCode, Translations> = {
     header: {
       banner: "Winnica, ul. 600-lecia 17",
       catalog: "Katalog",
-      print: "Poligrafia",
+      products: "Produkty",
+      print: "Produkty",
       capabilities: "Możliwości",
       shop: "Sklep",
       about: "O nas",
@@ -933,7 +937,8 @@ export const translations: Record<LanguageCode, Translations> = {
     header: {
       banner: "Winnyzja, 600-Jahre-Str. 17",
       catalog: "Katalog",
-      print: "Druckerei",
+      products: "Produkte",
+      print: "Produkte",
       capabilities: "Möglichkeiten",
       shop: "Shop",
       about: "Über uns",

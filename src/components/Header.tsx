@@ -247,9 +247,8 @@ export default function Header() {
   }, [setIsRegionModalOpen, setIsCatalogOpen]);
 
   const navLinks = [
-    { label: t.header.print, href: "/print" },
+    { label: t.header.products, href: "/products" },
     { label: t.header.capabilities, href: "/capabilities" },
-    { label: t.header.shop, href: "/shop" },
     { label: t.header.about, href: "/about" },
   ];
 
@@ -440,11 +439,11 @@ export default function Header() {
                 {t.header.catalog} →
               </button>
               <Link
-                href="/print"
+                href="/products"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block font-serif text-2xl text-slate-950 hover:text-edelvin-blue transition-colors"
               >
-                {t.header.print}
+                {t.header.products}
               </Link>
               <Link
                 href="/capabilities"
@@ -452,13 +451,6 @@ export default function Header() {
                 className="block font-serif text-2xl text-slate-950 hover:text-edelvin-blue transition-colors"
               >
                 {t.header.capabilities}
-              </Link>
-              <Link
-                href="/shop"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block font-serif text-2xl text-slate-950 hover:text-edelvin-blue transition-colors"
-              >
-                {t.header.shop}
               </Link>
               <Link
                 href="/about"
