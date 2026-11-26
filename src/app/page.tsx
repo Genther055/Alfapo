@@ -651,53 +651,53 @@ export default function HomePage() {
           <ScrollFadeIn>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
               
-              {/* Ліва колонка: Інформація та прямі контакти на всю висоту форми */}
-              <div className="lg:col-span-4 flex flex-col justify-between py-2">
+              {/* Ліва колонка: Інформація та прямі контакти з ідеальним вирівнюванням по висоті */}
+              <div className="lg:col-span-4 flex flex-col justify-between py-1">
                 <div>
-                  <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-950 tracking-tight leading-[1.08]">
+                  <h2 className="font-serif text-2xl sm:text-3xl lg:text-[32px] font-normal text-slate-950 tracking-tight leading-[1.14]">
                     {t.contactSection.title}
                   </h2>
-                  <p className="text-base sm:text-lg text-slate-600 font-normal mt-4 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 font-normal mt-2.5 leading-relaxed">
                     {t.contactSection.subtitle}
                   </p>
                 </div>
 
                 {/* Прямі контакти: Номери в колонку */}
-                <div className="pt-8 border-t border-slate-200 space-y-6 mt-8 lg:mt-auto">
+                <div className="pt-5 border-t border-slate-200 mt-4 space-y-4">
                   <div>
-                    <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-3 font-bold">
+                    <span className="text-[10px] font-sans text-slate-400 uppercase tracking-widest block mb-2 font-bold">
                       {t.contactSection.phoneDept}
                     </span>
-                    <div className="flex flex-col gap-3 font-sans">
+                    <div className="flex flex-col gap-1.5 font-sans">
                       <a
                         href="tel:+380432550333"
-                        className="text-xl sm:text-2xl font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2.5 w-fit"
+                        className="text-base sm:text-lg font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2 w-fit"
                       >
-                        <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
+                        <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
                         <span>+38 (0432) 550-333</span>
                       </a>
                       <a
                         href="tel:+380775153020"
-                        className="text-xl sm:text-2xl font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2.5 w-fit"
+                        className="text-base sm:text-lg font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2 w-fit"
                       >
-                        <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
+                        <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
                         <span>+380 (77) 515 30 20</span>
                       </a>
                       <a
                         href="tel:+380961793454"
-                        className="text-xl sm:text-2xl font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2.5 w-fit"
+                        className="text-base sm:text-lg font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2 w-fit"
                       >
-                        <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
+                        <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
                         <span>+380 (96) 179 34 54</span>
                       </a>
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-slate-200">
-                    <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-2 font-bold">
+                  <div className="pt-3.5 border-t border-slate-200">
+                    <span className="text-[10px] font-sans text-slate-400 uppercase tracking-widest block mb-1.5 font-bold">
                       {t.contactSection.emailDept}
                     </span>
-                    <div className="space-y-1.5 font-sans text-base text-slate-900">
+                    <div className="space-y-0.5 font-sans text-xs sm:text-sm text-slate-900">
                       <a href="mailto:print@edelvin.com.ua" className="hover:text-edelvin-blue block transition-colors">
                         print@edelvin.com.ua
                       </a>
@@ -707,11 +707,11 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-slate-200">
-                    <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-2 font-bold">
+                  <div className="pt-3.5 border-t border-slate-200">
+                    <span className="text-[10px] font-sans text-slate-400 uppercase tracking-widest block mb-1 font-bold">
                       {t.contactSection.addressDept}
                     </span>
-                    <span className="font-sans text-sm text-slate-700 block">
+                    <span className="font-sans text-xs text-slate-700 block">
                       {t.contactSection.addressVal}
                     </span>
                   </div>

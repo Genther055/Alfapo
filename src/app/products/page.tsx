@@ -968,61 +968,61 @@ export default function ProductsPage() {
         <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             
-            {/* Ліва колонка: контакти з фіксацією висоти */}
-            <div className="lg:col-span-4 flex flex-col justify-between py-2">
+            {/* Ліва колонка: контакти з ідеальним вирівнюванням по висоті */}
+            <div className="lg:col-span-4 flex flex-col justify-between py-1">
               <div>
-                <span className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-edelvin-blue block mb-3">
+                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-edelvin-blue block mb-2">
                   ПРЯМИЙ ЗВ'ЯЗОК З ТЕХНОЛОГОМ
                 </span>
                 
-                <h2 className="font-serif text-3xl sm:text-4xl text-slate-950 font-normal leading-tight mb-4">
+                <h2 className="font-serif text-2xl sm:text-3xl lg:text-[32px] text-slate-950 font-normal leading-[1.14] mb-2.5">
                   Швидкий розрахунок тиражу від інженера
                 </h2>
                 
-                <p className="text-slate-600 text-sm leading-relaxed mb-8 font-light">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
                   Надішліть параметри проєкту або файл макета. Черговий інженер-технолог підбере оптимальне обладнання, розрахує розкладку та надішле точну специфікацію з калькуляцією вартості.
                 </p>
 
-                <div className="space-y-4 pt-4 border-t border-slate-200">
-                  <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-400 block">
+                <div className="space-y-3 pt-3.5 border-t border-slate-200">
+                  <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-slate-400 block">
                     ВІДДІЛ ПРОРАХУНКІВ ПОЛІГРАФІЇ
                   </span>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-1 font-sans">
                     <a
                       href="tel:+380432550333"
-                      className="flex items-center gap-3 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
+                      className="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
                     >
-                      <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
+                      <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
                       <span>+38 (0432) 550-333</span>
                     </a>
                     
                     <a
                       href="tel:+380775153020"
-                      className="flex items-center gap-3 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
+                      className="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
                     >
-                      <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
+                      <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
                       <span>+380 (77) 515 30 20</span>
                     </a>
 
                     <a
                       href="tel:+380961793454"
-                      className="flex items-center gap-3 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
+                      className="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
                     >
-                      <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
+                      <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
                       <span>+380 (96) 179 34 54</span>
                     </a>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-200 mt-6 space-y-1 text-xs text-slate-500">
-                  <span className="font-bold text-slate-900 block mb-1">Прийом макетів та технічних завдань:</span>
+                <div className="pt-3.5 border-t border-slate-200 mt-3.5 space-y-0.5 text-xs text-slate-600 font-sans">
+                  <span className="font-bold text-slate-900 block mb-1 text-[11px]">Прийом макетів та техзавдань:</span>
                   <p>print@edelvin.com.ua</p>
                   <p>etiqueta.es@gmail.com</p>
                 </div>
               </div>
 
-              <div className="pt-8 border-t border-slate-200 mt-8 text-xs text-slate-400">
+              <div className="pt-4 border-t border-slate-200 mt-4 text-[11px] font-sans text-slate-400">
                 Виробничий комплекс: м. Вінниця, вул. 600-річчя, 17
               </div>
             </div>
