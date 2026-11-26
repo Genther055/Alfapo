@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ShoppingBag,
@@ -14,6 +15,9 @@ import {
   FileText,
   Clock,
   CheckCircle2,
+  MapPin,
+  Landmark,
+  BadgePercent
 } from "lucide-react";
 
 interface ShopItem {
@@ -25,6 +29,8 @@ interface ShopItem {
   bulkPrice?: string;
   inStock: boolean;
   desc: string;
+  image: string;
+  badge?: string;
 }
 
 const SHOP_ITEMS: ShopItem[] = [
@@ -33,20 +39,24 @@ const SHOP_ITEMS: ShopItem[] = [
     name: "Папір офісний А4 80 г/м²",
     category: "paper",
     price: 185,
-    unit: "пачка",
+    unit: "пачка (500 арк.)",
     bulkPrice: "від 50 пачок — 178 ₴",
     inStock: true,
-    desc: "Сертифікований європейський офісний папір для щоденного лазерного та струменевого друку.",
+    desc: "Сертифікований європейський офісний папір класу А/В для щоденного швидкісного лазерного та струменевого друку. Висока білизна CIE 150%.",
+    image: "/images/shop/paper-reams.jpg",
+    badge: "Хіт складу",
   },
   {
     id: "paper-a3",
     name: "Папір офісний А3 80 г/м²",
     category: "paper",
     price: 375,
-    unit: "пачка",
+    unit: "пачка (500 арк.)",
     bulkPrice: "від 10 пачок — 360 ₴",
     inStock: true,
-    desc: "Для друку креслень, схем, звітів, планів та проектної документації на офісних апаратах формату А3.",
+    desc: "Для друку креслень, схем, звітів, планів та проектної документації на офісних апаратах формату А3. Чіткі краї без пилу.",
+    image: "/images/shop/paper-reams.jpg",
+    badge: "Формат А3",
   },
   {
     id: "school-journal-1-4",
@@ -56,7 +66,9 @@ const SHOP_ITEMS: ShopItem[] = [
     unit: "шт",
     bulkPrice: "від 20 шт — 135 ₴",
     inStock: true,
-    desc: "Офіційний державний зразок, затверджений Міністерством освіти і науки України для початкової школи.",
+    desc: "Офіційний державний зразок, затверджений Міністерством освіти і науки України для початкової школи. Зручна розмітка за програмою НУШ.",
+    image: "/images/cases/kids-books-games.png",
+    badge: "Держстандарт МОН",
   },
   {
     id: "school-journal-5-11",
@@ -66,7 +78,9 @@ const SHOP_ITEMS: ShopItem[] = [
     unit: "шт",
     bulkPrice: "від 20 шт — 150 ₴",
     inStock: true,
-    desc: "Офіційний обліковий документ для закладів загальної середньої освіти. Міцний ниткошвейний блок.",
+    desc: "Офіційний обліковий документ для закладів загальної середньої освіти. Міцний ниткошвейний блок, зносостійка палітурка 7БЦ.",
+    image: "/images/products/hardcover-books-mockup.jpg",
+    badge: "Тверда палітурка",
   },
   {
     id: "notary-registry-book",
@@ -76,17 +90,21 @@ const SHOP_ITEMS: ShopItem[] = [
     unit: "шт",
     bulkPrice: "від 5 шт — 295 ₴",
     inStock: true,
-    desc: "Виготовлена за вимогами юстиції: прошнурований блок, завірена печатною сіткою, тверда палітурка.",
+    desc: "Виготовлена за суворими вимогами юстиції: прошнурований блок, захисна фонова сітка, тверда палітурка з тисненням золотою фольгою.",
+    image: "/images/shop/registry-book.jpg",
+    badge: "Для нотаріусів",
   },
   {
     id: "cubes-white-90",
-    name: "Блоки листів для запису 90 × 90 мм",
+    name: "Блоки листів для запису 90 × 90 мм (кубарики)",
     category: "stationery",
     price: 95,
     unit: "блок",
     bulkPrice: "від 10 шт — 85 ₴",
     inStock: true,
-    desc: "Білосніжний офсетний папір у формі куба для коротких щоденних нотаток і повідомлень.",
+    desc: "Білосніжний офсетний папір у формі куба для коротких щоденних нотаток, проклеєний по одному краю для зручного рівного відриву.",
+    image: "/images/products/stationery-mockup.jpg",
+    badge: "Офісний запас",
   },
   {
     id: "folder-pocket-a4",
@@ -96,17 +114,21 @@ const SHOP_ITEMS: ShopItem[] = [
     unit: "шт",
     bulkPrice: "від 50 шт — 20 ₴",
     inStock: true,
-    desc: "Цупка папка з картону 300 г/м² для презентацій, комерційних пропозицій та зберігання договорів.",
+    desc: "Цупка презентаційна папка з картону 300 г/м² для договорів, комерційних пропозицій та виставок. Оснащена прорізом для візитки.",
+    image: "/images/branding/alfa-omega-showcase.png",
+    badge: "Картон 300 г/м²",
   },
   {
     id: "folder-binder-75",
-    name: "Папка-реєстратор із важільним механізмом А4 75 мм",
+    name: "Папка-реєстратор із важільним механізмом 75 мм",
     category: "folders",
     price: 88,
     unit: "шт",
     bulkPrice: "від 10 шт — 80 ₴",
     inStock: true,
-    desc: "Надійний важільний арочний механізм для довговічного зберігання бухгалтерських та фінансових архівів.",
+    desc: "Надійний арочний важільний механізм, металевий протектор нижнього краю та кільце для зручного зняття з полиці. Формат А4.",
+    image: "/images/cases/luxury-hospitality.jpg",
+    badge: "Архів 75 мм",
   },
   {
     id: "household-towels",
@@ -116,7 +138,9 @@ const SHOP_ITEMS: ShopItem[] = [
     unit: "уп",
     bulkPrice: "від 10 уп — 60 ₴",
     inStock: true,
-    desc: "Первинна целюлоза з м'якою перфорацією для санітарних кімнат та кухонь організацій.",
+    desc: "100% первинна целюлоза з м'якою перфорацією та тисненням для санітарних кімнат, офісних кухонь та виробничих зон.",
+    image: "/images/capabilities/mockup-delivery-box.jpg",
+    badge: "100% целюлоза",
   },
   {
     id: "sample-box",
@@ -126,7 +150,9 @@ const SHOP_ITEMS: ShopItem[] = [
     unit: "набір",
     bulkPrice: "безкоштовно при замовленні тиражу",
     inStock: true,
-    desc: "Тактильний каталог матеріалів: зразки щільності від 80 до 350 г/м², Soft-Touch ламінація, фольга Kurz та вибірковий лак.",
+    desc: "Тактильний каталог матеріалів: зразки щільності від 80 до 350 г/м², Soft-Touch ламінація, фольга Kurz та вибірковий УФ-лак.",
+    image: "/images/cases/gift-box-cards.png",
+    badge: "Для дизайнерів та B2B",
   },
 ];
 
@@ -158,84 +184,116 @@ export default function ShopPage() {
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         
         {/* Shop Header */}
-        <div className="pb-12 border-b border-slate-200">
+        <div className="pb-8 border-b border-slate-200">
           <span className="font-sans text-xs font-bold tracking-[0.25em] text-edelvin-blue uppercase block mb-3">
-            ВЛАСНИЙ СКЛАД • ВІННИЦЯ • ВІДВАНТАЖЕННЯ ДЕНЬ-У-ДЕНЬ
+            ВЛАСНИЙ СКЛАД • ВІННИЦЯ
           </span>
-          <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal tracking-tight text-slate-950">
+          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-slate-950">
             Складське забезпечення та папір
           </h1>
-          <p className="text-base sm:text-lg text-slate-700 font-normal mt-4 max-w-3xl leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 font-normal mt-3 max-w-3xl leading-relaxed">
             Прямі поставки оригінального сертифікованого офісного паперу, бланкової та журнальної продукції за держстандартом МОН, папок та канцтоварів. Працюємо з бюджетними організаціями, підприємствами та приватними замовниками.
           </p>
 
-          {/* Виробничі стандарти складу */}
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-100 font-sans text-xs">
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">Самовивіз</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">вул. 600-річчя, 17</span>
+          {/* Компактна лаконічна плашка параметрів (менша і без ПДВ 20%) */}
+          <div className="mt-6 pt-5 border-t border-slate-200 flex flex-wrap items-center gap-x-8 gap-y-3 font-sans text-xs">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+              <span className="font-bold text-slate-950">Самовивіз:</span>
+              <span className="text-slate-500">вул. 600-річчя, 17</span>
             </div>
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">ПДВ 20%</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Повний пакет накладних</span>
+
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              <span className="font-bold text-slate-950">Казначейство:</span>
+              <span className="text-slate-500">супровід державних установ</span>
             </div>
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">Казначейство</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Для державних установ</span>
-            </div>
-            <div>
-              <span className="block text-2xl font-serif text-slate-950 font-normal">Оптові ціни</span>
-              <span className="text-slate-500 uppercase tracking-wider text-[10px] mt-0.5 block">Знижки від обсягу</span>
+
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-amber-600"></span>
+              <span className="font-bold text-slate-950">Оптові ціни:</span>
+              <span className="text-slate-500">знижки та спецтарифи від обсягу</span>
             </div>
           </div>
         </div>
 
-        {/* Фільтри категорій у стилі мінімалістичних чіпсів */}
-        <div className="py-8 flex flex-wrap gap-2 text-xs font-sans font-bold border-b border-slate-200">
-          {categoriesList.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              onClick={() => setActiveCategory(c.id)}
-              className={`px-4 py-2.5 transition-all cursor-pointer rounded-xs uppercase tracking-wider ${
-                activeCategory === c.id
-                  ? "bg-slate-950 text-white shadow-xs"
-                  : "bg-white border border-slate-200 text-slate-700 hover:border-slate-950 hover:text-slate-950"
-              }`}
-            >
-              {c.label}
-            </button>
-          ))}
+        {/* ЄДИНА ЗРУЧНА СТИЛІСТИКА КАТЕГОРІЙНИХ ТАБІВ ПО ВСЬОМУ САЙТУ */}
+        <div className="py-6 flex items-center gap-2 overflow-x-auto no-scrollbar text-xs font-sans font-semibold border-b border-slate-200">
+          {categoriesList.map((c) => {
+            const count = c.id === "all" ? SHOP_ITEMS.length : SHOP_ITEMS.filter((i) => i.category === c.id).length;
+            const isActive = activeCategory === c.id;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => setActiveCategory(c.id)}
+                className={`px-4 py-2.5 rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 flex items-center gap-2 ${
+                  isActive
+                    ? "bg-slate-950 text-white shadow-xs"
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-950"
+                }`}
+              >
+                <span>{c.label}</span>
+                <span
+                  className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                    isActive ? "bg-white/20 text-white" : "bg-slate-200 text-slate-600"
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
-        {/* Сітка товарів у високому журнальному стилі */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {/* СІТКА ТОВАРІВ З ФОТОГРАФІЯМИ: БАГАТО ВІЗУАЛУ, ЧИТАБЕЛЬНО І СУЧАСНО */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="border border-slate-200/90 bg-white p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:border-slate-950 hover:shadow-xl transition-all duration-300 group"
+              className="border border-slate-200 bg-white rounded-sm p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:border-slate-950 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
             >
               <div>
+                {/* Фото товару */}
+                <div className="relative aspect-4/3 w-full bg-slate-100 rounded-xs overflow-hidden mb-5 border border-slate-100 shadow-xs">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  {item.badge && (
+                    <span className="absolute top-3 left-3 px-2.5 py-1 bg-slate-950/80 backdrop-blur-md text-white text-[10px] font-sans font-bold uppercase tracking-wider rounded-xs border border-white/20">
+                      {item.badge}
+                    </span>
+                  )}
+                  {item.inStock && (
+                    <span className="absolute top-3 right-3 px-2 py-0.5 bg-emerald-600 text-white text-[10px] font-sans font-semibold rounded-xs">
+                      В наявності
+                    </span>
+                  )}
+                </div>
+
                 {/* Назва та опис виробу */}
-                <div className="pb-5">
+                <div className="space-y-2">
                   <h3 className="font-serif text-2xl text-slate-950 font-normal leading-snug group-hover:text-edelvin-blue transition-colors">
                     {item.name}
                   </h3>
-                  <p className="text-sm text-slate-600 font-normal mt-3 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed line-clamp-3">
                     {item.desc}
                   </p>
                 </div>
               </div>
 
               {/* Нижня панель: Ціна та дія */}
-              <div className="pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
+              <div className="pt-5 mt-6 border-t border-slate-100 flex items-center justify-between gap-4">
                 <div>
                   <div className="flex items-baseline gap-1.5">
                     <span className="font-sans text-2xl font-bold text-slate-950">{item.price} ₴</span>
                     <span className="text-xs font-sans text-slate-500">/ {item.unit}</span>
                   </div>
                   {item.bulkPrice && (
-                    <span className="text-[10px] font-sans text-slate-500 block mt-0.5">
+                    <span className="text-[11px] font-sans text-emerald-700 font-semibold block mt-0.5">
                       {item.bulkPrice}
                     </span>
                   )}
@@ -244,7 +302,7 @@ export default function ShopPage() {
                 <button
                   type="button"
                   onClick={() => handleAddToCart(item.name)}
-                  className={`font-sans text-xs font-bold uppercase tracking-wider px-4 py-3 rounded-xs transition-all cursor-pointer shrink-0 ${
+                  className={`font-sans text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-xs transition-all cursor-pointer shrink-0 shadow-xs ${
                     addedItem === item.name
                       ? "bg-emerald-700 text-white"
                       : "bg-slate-950 text-white hover:bg-edelvin-blue"
@@ -258,21 +316,21 @@ export default function ShopPage() {
         </div>
 
         {/* B2B Спеціальне забезпечення для організацій */}
-        <div className="mt-16 p-8 sm:p-12 border border-slate-950 bg-slate-950 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div className="mt-16 p-8 sm:p-12 border border-slate-950 bg-slate-950 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-8 rounded-sm shadow-xl">
           <div className="space-y-2 max-w-2xl">
-            <span className="font-sans text-xs font-bold text-edelvin-blue uppercase tracking-widest block">
+            <span className="font-sans text-xs font-bold text-blue-400 uppercase tracking-widest block">
               КОРПОРАТИВНІ ДОГОВОРИ ТА БЮДЖЕТНІ ОРГАНІЗАЦІЇ
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl font-normal leading-tight">
               Регулярне постачання паперу та канцелярії за фіксованими цінами
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed pt-1">
-              Укладаємо офіційні річні договори з установами Вінниці та області. Безготівковий розрахунок, казначейський супровід та безкоштовна доставка автопарком підприємства прямо до вашого складу.
+              Укладаємо офіційні річні договори з установами Вінниці та області. Безготівковий розрахунок, казначейський супровід та швидка доставка транспортом підприємства прямо до вашого закладу.
             </p>
           </div>
 
           <Link
-            href="/#direct-contact"
+            href="/b2b"
             className="font-sans text-xs font-bold uppercase tracking-[0.2em] bg-white text-slate-950 hover:bg-edelvin-blue hover:text-white px-6 py-4 rounded-xs transition-colors shrink-0 inline-flex items-center gap-2"
           >
             <span>Отримати рахунок / КП</span>
