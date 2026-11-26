@@ -563,24 +563,24 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/branding/sku-series-olive-oil.png"
+                src="/images/capabilities/mockup-food-retail.jpg"
                 alt="Серійна лінійка для скляної тари"
                 title="Серійна лінійка для скляної тари"
-                sub="Єдина дизайн-система для пляшок різного об'єму"
+                sub="Єдина дизайн-система «Альфа і Омега» для пляшок"
                 aspect="aspect-[4/3]"
               />
               <ScrollParallaxCard
-                src="/images/branding/cosmetics-dispensers-line.png"
+                src="/images/capabilities/mockup-pharma-box.jpg"
                 alt="Комплексна лінійка для косметики"
                 title="Комплексна лінійка для косметики"
-                sub="Флакони, баночки, тубуси та дозатори"
+                sub="Флакони, баночки, тубуси та коробки з ложементом"
                 aspect="aspect-[4/3]"
               />
               <ScrollParallaxCard
-                src="/images/branding/coffee-black-label.png"
+                src="/images/products/stationery-mockup.jpg"
                 alt="Етикетки для фольгованих пакетів"
                 title="Етикетки для фольгованих пакетів"
-                sub="Диференціація сортів у серійній лінійці"
+                sub="Диференціація сортів у серійній лінійці з тисненням"
                 aspect="aspect-[4/3]"
               />
               <ScrollParallaxCard
@@ -643,25 +643,25 @@ export default function CapabilitiesPage() {
             {/* Зразки продукції */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <ScrollParallaxCard
-                src="/images/branding/wine-label-textured.png"
+                src="/images/capabilities/mockup-spirits-gold.jpg"
                 alt="Преміальна винна етикетка"
                 title="Преміальна винна етикетка"
-                sub="Винний фактурний папір • Тиснення"
+                sub="Винний фактурний папір • Тиснення золотом"
               />
               <ScrollParallaxCard
-                src="/images/branding/craft-beverage-bottles.png"
+                src="/images/capabilities/mockup-craft-distillery.jpg"
                 alt="Фігурна етикетка для напоїв"
                 title="Фігурна етикетка для напоїв"
                 sub="Складний висічний контур • Живе бродіння"
               />
               <ScrollParallaxCard
-                src="/images/branding/beverage-wine-collection.png"
+                src="/images/capabilities/mockup-seafood-gourmet.jpg"
                 alt="Класична гравірована етикетка"
                 title="Класична гравірована етикетка"
-                sub="Прецизійна передача півтонів для вин"
+                sub="Прецизійна передача півтонів для напоїв"
               />
               <ScrollParallaxCard
-                src="/images/branding/sku-series-beverages.png"
+                src="/images/branding/alfa-omega-showcase.png"
                 alt="Етикетка для натуральних напоїв"
                 title="Етикетка для натуральних напоїв"
                 sub="Крафтова основа • Пастельна гама"
@@ -727,13 +727,13 @@ export default function CapabilitiesPage() {
                 sub="Стійкість до вологи в холодильних вітринах"
               />
               <ScrollParallaxCard
-                src="/images/branding/spirits-gold-foil.png"
+                src="/images/products/wellness-cards-mockup.jpg"
                 alt="Металізована золота етикетка"
                 title="Металізована золота етикетка"
-                sub="Тиснення фольгою для снекової продукції"
+                sub="Тиснення фольгою для брендової продукції"
               />
               <ScrollParallaxCard
-                src="/images/branding/horeca-local-branding.png"
+                src="/images/products/hardcover-books-mockup.jpg"
                 alt="Багатоколірна контурна емблема"
                 title="Багатоколірна контурна емблема"
                 sub="Точна плотерна висічка складної форми"
@@ -808,16 +808,16 @@ export default function CapabilitiesPage() {
                 sub="Стійкість до агресивних рідин та тертя"
               />
               <ScrollParallaxCard
-                src="/images/branding/glass-jars-cosmetic.png"
+                src="/images/capabilities/mockup-delivery-box.jpg"
                 alt="Широкоформатна етикетка для пластику"
                 title="Широкоформатна етикетка для пластику"
                 sub="Посилена адгезія до боксів та контейнерів"
               />
               <ScrollParallaxCard
-                src="/images/branding/serum-dropper-bottles.png"
-                alt="Спеціалізована тонка смуга"
-                title="Спеціалізована тонка смуга"
-                sub="Для вузьких флаконів, тубусів та помад"
+                src="/images/products/calendars-planner-mockup.jpg"
+                alt="Спеціалізована маркувальна смуга"
+                title="Спеціалізована маркувальна смуга"
+                sub="Для флаконів, тубусів та косметичних засобів"
               />
             </div>
 
@@ -882,10 +882,10 @@ export default function CapabilitiesPage() {
                 aspect="aspect-[3/4]"
               />
               <ScrollParallaxCard
-                src="/images/branding/carton-dieline-packaging.png"
+                src="/images/products/hardcover-books-mockup.jpg"
                 alt="Преміальне картонне пакування"
                 title="Преміальне картонне пакування"
-                sub="Матова тактильна поверхня для косметики"
+                sub="Матова тактильна поверхня для продукції"
                 aspect="aspect-[3/4]"
               />
             </div>

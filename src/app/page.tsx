@@ -26,7 +26,7 @@ const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
     title: "Пакування та коробки з індивідуальною висічкою",
     subtitle: "Крафтові пакети, фармацевтичні пачки та преміум-косметика",
     category: "Упаковка та розгортки",
-    image: "/images/branding/packaging-mockup-line.png",
+    image: "/images/capabilities/mockup-pharma-box.jpg",
     description: "Індивідуальна конструкторська розробка розгорток коробок, вирубних штампів та паперових пакетів для ритейлу й фармації.",
     badge: "Конструкторське бюро",
     link: "/catalog/boxes",
@@ -36,7 +36,7 @@ const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
     title: "Етикетки для лінійки органічної косметики",
     subtitle: "Флакони, баночки, туби та сироватки",
     category: "Косметичний сектор",
-    image: "/images/branding/cosmetics-natural-line.png",
+    image: "/images/capabilities/mockup-delivery-box.jpg",
     description: "Вологостійкі та олієстійкі плівкові етикетки з шовковистим лаком для косметичних засобів та доглядових лінійок.",
     badge: "Стійка плівка",
     link: "/catalog/stickers",
@@ -46,7 +46,7 @@ const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
     title: "Серійні етикетки для скляної тари різного об'єму",
     subtitle: "Масштабування дизайну від мініатюр до пляшок 1 л",
     category: "Олії та делікатеси",
-    image: "/images/branding/olive-oil-line.png",
+    image: "/images/capabilities/mockup-food-retail.jpg",
     description: "Пропорційне масштабування етикеток під будь-який діаметр скляної пляшки з жиростійким покриттям.",
     badge: "Серійний друк",
     link: "/catalog/roll-labels",
@@ -56,7 +56,7 @@ const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
     title: "Серійні етикетки для лінійки крафтової кави",
     subtitle: "Єдина колірна дизайн-система для кавових дой-паків",
     category: "Крафтові бренди",
-    image: "/images/branding/coffee-black-label.png",
+    image: "/images/products/stationery-mockup.jpg",
     description: "Зручне масштабування для брендів з широким асортиментом: зміна назв, ваги, дат обсмаження та QR-кодів в одному замовленні.",
     badge: "Серійний друк",
     link: "/catalog/roll-labels",
@@ -66,7 +66,7 @@ const HOME_CAROUSEL_ITEMS: CarouselItem[] = [
     title: "Преміальні серійні етикетки для напоїв та олій",
     subtitle: "Флакони, скло, крафтові серії та фігурна висічка",
     category: "Напої та преміум-сегмент",
-    image: "/images/branding/craft-beverage-bottles.png",
+    image: "/images/capabilities/mockup-craft-distillery.jpg",
     description: "Промисловий друк на текстурованих паперах верже, металізованих плівках та нанесення вибіркового лаку Kurz для винної та крафтової продукції.",
     badge: "AccurioLabel 400",
     link: "/catalog/roll-labels",
@@ -354,7 +354,7 @@ export default function HomePage() {
               <div className="space-y-4 group">
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border border-slate-200 group-hover:border-slate-950 transition-colors rounded-xs shadow-xs">
                   <Image
-                    src="/images/branding/alfa-omega-showcase.png"
+                    src="/images/products/stationery-mockup.jpg"
                     alt="Фірмова продукція та пакування Альфа і Омега"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
@@ -379,7 +379,7 @@ export default function HomePage() {
               <div className="space-y-4 group">
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border border-slate-200 group-hover:border-slate-950 transition-colors rounded-xs shadow-xs">
                   <Image
-                    src="/images/branding/beverage-wine-collection.png"
+                    src="/images/capabilities/mockup-spirits-gold.jpg"
                     alt="Серійні рулонні етикетки для скляної тари"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
@@ -404,7 +404,7 @@ export default function HomePage() {
               <div className="space-y-4 group">
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border border-slate-200 group-hover:border-slate-950 transition-colors rounded-xs shadow-xs">
                   <Image
-                    src="/images/branding/carton-dieline-packaging.png"
+                    src="/images/capabilities/mockup-delivery-box.jpg"
                     alt="Пакування та індивідуальні розгортки коробок"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
@@ -654,66 +654,69 @@ export default function HomePage() {
               {/* Ліва колонка: Інформація та прямі контакти з ідеальним вирівнюванням по висоті */}
               <div className="lg:col-span-4 flex flex-col justify-between py-1">
                 <div>
-                  <h2 className="font-serif text-2xl sm:text-3xl lg:text-[32px] font-normal text-slate-950 tracking-tight leading-[1.14]">
+                  <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-normal text-slate-950 tracking-tight leading-[1.12]">
                     {t.contactSection.title}
                   </h2>
-                  <p className="text-xs sm:text-sm text-slate-600 font-normal mt-2.5 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-600 font-normal mt-3.5 leading-relaxed">
                     {t.contactSection.subtitle}
                   </p>
                 </div>
 
                 {/* Прямі контакти: Номери в колонку */}
-                <div className="pt-5 border-t border-slate-200 mt-4 space-y-4">
+                <div className="pt-6 border-t border-slate-200 mt-6 space-y-5">
                   <div>
-                    <span className="text-[10px] font-sans text-slate-400 uppercase tracking-widest block mb-2 font-bold">
+                    <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-2.5 font-bold">
                       {t.contactSection.phoneDept}
                     </span>
-                    <div className="flex flex-col gap-1.5 font-sans">
+                    <div className="flex flex-col gap-2 font-sans">
                       <a
                         href="tel:+380432550333"
-                        className="text-base sm:text-lg font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2 w-fit"
+                        className="text-lg sm:text-xl font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2.5 w-fit"
                       >
-                        <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
+                        <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
                         <span>+38 (0432) 550-333</span>
                       </a>
                       <a
                         href="tel:+380775153020"
-                        className="text-base sm:text-lg font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2 w-fit"
+                        className="text-lg sm:text-xl font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2.5 w-fit"
                       >
-                        <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
+                        <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
                         <span>+380 (77) 515 30 20</span>
                       </a>
                       <a
                         href="tel:+380961793454"
-                        className="text-base sm:text-lg font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2 w-fit"
+                        className="text-lg sm:text-xl font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-2.5 w-fit"
                       >
-                        <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
+                        <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
                         <span>+380 (96) 179 34 54</span>
                       </a>
                     </div>
                   </div>
 
-                  <div className="pt-3.5 border-t border-slate-200">
-                    <span className="text-[10px] font-sans text-slate-400 uppercase tracking-widest block mb-1.5 font-bold">
-                      {t.contactSection.emailDept}
-                    </span>
-                    <div className="space-y-0.5 font-sans text-xs sm:text-sm text-slate-900">
-                      <a href="mailto:print@edelvin.com.ua" className="hover:text-edelvin-blue block transition-colors">
-                        print@edelvin.com.ua
-                      </a>
-                      <a href="mailto:etiqueta.es@gmail.com" className="hover:text-edelvin-blue block transition-colors">
-                        etiqueta.es@gmail.com
-                      </a>
+                  {/* Email та Адреса компактно у 2 колонки для бездоганного вирівнювання з правою формою */}
+                  <div className="pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-1 font-bold">
+                        {t.contactSection.emailDept}
+                      </span>
+                      <div className="space-y-0.5 font-sans text-xs sm:text-sm text-slate-900">
+                        <a href="mailto:print@edelvin.com.ua" className="hover:text-edelvin-blue block transition-colors">
+                          print@edelvin.com.ua
+                        </a>
+                        <a href="mailto:etiqueta.es@gmail.com" className="hover:text-edelvin-blue block transition-colors">
+                          etiqueta.es@gmail.com
+                        </a>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="pt-3.5 border-t border-slate-200">
-                    <span className="text-[10px] font-sans text-slate-400 uppercase tracking-widest block mb-1 font-bold">
-                      {t.contactSection.addressDept}
-                    </span>
-                    <span className="font-sans text-xs text-slate-700 block">
-                      {t.contactSection.addressVal}
-                    </span>
+                    <div>
+                      <span className="text-[11px] font-sans text-slate-400 uppercase tracking-widest block mb-1 font-bold">
+                        {t.contactSection.addressDept}
+                      </span>
+                      <span className="font-sans text-xs sm:text-sm text-slate-700 block">
+                        {t.contactSection.addressVal}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

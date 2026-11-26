@@ -825,10 +825,7 @@ export default function ProductsPage() {
               
               {/* ТЕКСТОВИЙ ОПИС КОЛЕКЦІЇ — ЗЛІВА */}
               <div className="lg:col-span-6 space-y-6 order-1">
-                <div className="space-y-2">
-                  <span className="text-xs font-sans font-bold text-edelvin-blue uppercase tracking-widest block">
-                    {cat.subtitle}
-                  </span>
+                <div>
                   <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight leading-[1.12]">
                     {cat.title}
                   </h2>
@@ -850,7 +847,7 @@ export default function ProductsPage() {
                 </div>
               </div>
 
-              {/* КОРОТКЕ ВІДЕО ВИРОБНИЦТВА — СПРАВА */}
+              {/* КОРОТКЕ ВІДЕО ВИРОБНИЦТВА — СПРАВА (ЧИСТЕ БЕЗ ТЕКСТОВИХ ОВЕРЛЕЇВ) */}
               <div className="lg:col-span-6 relative aspect-16/10 rounded-sm overflow-hidden bg-slate-950 border border-slate-200 group shadow-lg order-2">
                 {cat.videoSrc ? (
                   <video
@@ -870,15 +867,6 @@ export default function ProductsPage() {
                     className="object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs font-sans">
-                  <span className="px-3 py-1 bg-slate-950/80 backdrop-blur-md rounded-xs border border-white/20 font-bold uppercase tracking-widest text-[10px]">
-                    {cat.badge}
-                  </span>
-                  <span className="text-white/80 font-serif italic text-sm">
-                    Відео виробництва «Альфа і Омега»
-                  </span>
-                </div>
               </div>
 
             </div>
@@ -971,59 +959,66 @@ export default function ProductsPage() {
             {/* Ліва колонка: контакти з ідеальним вирівнюванням по висоті */}
             <div className="lg:col-span-4 flex flex-col justify-between py-1">
               <div>
-                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-edelvin-blue block mb-2">
+                <span className="text-[11px] font-sans font-bold uppercase tracking-widest text-edelvin-blue block mb-2.5">
                   ПРЯМИЙ ЗВ'ЯЗОК З ТЕХНОЛОГОМ
                 </span>
                 
-                <h2 className="font-serif text-2xl sm:text-3xl lg:text-[32px] text-slate-950 font-normal leading-[1.14] mb-2.5">
-                  Швидкий розрахунок тиражу від інженера
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-slate-950 font-normal leading-[1.12] mb-3">
+                  Швидкий розрахунок тиражу від технолога
                 </h2>
                 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
                   Надішліть параметри проєкту або файл макета. Черговий інженер-технолог підбере оптимальне обладнання, розрахує розкладку та надішле точну специфікацію з калькуляцією вартості.
                 </p>
 
-                <div className="space-y-3 pt-3.5 border-t border-slate-200">
-                  <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-slate-400 block">
+                <div className="space-y-4 pt-5 border-t border-slate-200">
+                  <span className="text-[11px] font-sans font-bold uppercase tracking-widest text-slate-400 block">
                     ВІДДІЛ ПРОРАХУНКІВ ПОЛІГРАФІЇ
                   </span>
                   
-                  <div className="space-y-1 font-sans">
+                  <div className="space-y-2 font-sans">
                     <a
                       href="tel:+380432550333"
-                      className="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
+                      className="flex items-center gap-2.5 text-lg sm:text-xl font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
                     >
-                      <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
+                      <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
                       <span>+38 (0432) 550-333</span>
                     </a>
                     
                     <a
                       href="tel:+380775153020"
-                      className="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
+                      className="flex items-center gap-2.5 text-lg sm:text-xl font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
                     >
-                      <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
+                      <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
                       <span>+380 (77) 515 30 20</span>
                     </a>
 
                     <a
                       href="tel:+380961793454"
-                      className="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
+                      className="flex items-center gap-2.5 text-lg sm:text-xl font-bold text-slate-900 hover:text-edelvin-blue transition-colors"
                     >
-                      <Phone className="w-3.5 h-3.5 text-edelvin-blue shrink-0" />
+                      <Phone className="w-4 h-4 text-edelvin-blue shrink-0" />
                       <span>+380 (96) 179 34 54</span>
                     </a>
                   </div>
                 </div>
-
-                <div className="pt-3.5 border-t border-slate-200 mt-3.5 space-y-0.5 text-xs text-slate-600 font-sans">
-                  <span className="font-bold text-slate-900 block mb-1 text-[11px]">Прийом макетів та техзавдань:</span>
-                  <p>print@edelvin.com.ua</p>
-                  <p>etiqueta.es@gmail.com</p>
-                </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-200 mt-4 text-[11px] font-sans text-slate-400">
-                Виробничий комплекс: м. Вінниця, вул. 600-річчя, 17
+              {/* Email та Адреса компактно у 2 колонки для рівного закінчення з формою */}
+              <div className="pt-4 border-t border-slate-200 mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans text-slate-700">
+                <div>
+                  <span className="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider">
+                    Прийом макетів:
+                  </span>
+                  <p className="hover:text-edelvin-blue cursor-pointer">print@edelvin.com.ua</p>
+                  <p className="hover:text-edelvin-blue cursor-pointer">etiqueta.es@gmail.com</p>
+                </div>
+                <div>
+                  <span className="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider">
+                    Виробничий комплекс:
+                  </span>
+                  <p className="text-slate-600">м. Вінниця, вул. 600-річчя, 17</p>
+                </div>
               </div>
             </div>
 
