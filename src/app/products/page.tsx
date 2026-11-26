@@ -42,6 +42,8 @@ interface CategorySectionData {
   subtitle: string;
   leadText: string;
   bannerImage: string;
+  videoSrc?: string;
+  posterSrc?: string;
   badge: string;
   products: ProductCardData[];
 }
@@ -54,6 +56,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Високоточний повноколірний друк ділових матеріалів, презентацій та комерційної документації на промислових машинах Konica Minolta. Чіткість найдрібніших шрифтів, насичені відтінки та видача готових накладів від 24 годин.",
     bannerImage: "/images/products/stationery-mockup.jpg",
+    videoSrc: "/videos/konica-digital.mp4",
+    posterSrc: "/videos/konica-digital-poster.jpg",
     badge: "Терміново від 24 год",
     products: [
       {
@@ -114,6 +118,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Фірмові папки для документів, презентаційні каталоги продукції, корпоративні блокноти та настільні планінги. Створюємо комплексні набори для виставок, семінарів та ключових клієнтів.",
     bannerImage: "/images/branding/alfa-omega-showcase.png",
+    videoSrc: "/videos/packaging-line.mp4",
+    posterSrc: "/videos/packaging-line-poster.jpg",
     badge: "Іміджевий стандарт",
     products: [
       {
@@ -174,6 +180,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Офіційні бланки суворої звітності, багатошарові самокопіювальні комплекти для логістики й складів, квитанції з захисною нумерацією та книги реєстрації наказів у відповідності до державних стандартів діловодства.",
     bannerImage: "/images/cases/luxury-hospitality.jpg",
+    videoSrc: "/videos/plant-hero.mp4",
+    posterSrc: "/videos/plant-hero-poster.jpg",
     badge: "Звітність за ДСТУ",
     products: [
       {
@@ -233,6 +241,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Власна автоматична лінія виготовлення твердої палітурки 7БЦ. Випускаємо художні книги, ювілейні монографії, дипломні роботи, корпоративні хроніки та дорогі каталоги з золотим тисненням фольгою Kurz і шовковими стрічками-закладками (лясе).",
     bannerImage: "/images/products/hardcover-books-mockup.jpg",
+    videoSrc: "/videos/book-binding.mp4",
+    posterSrc: "/videos/book-binding-poster.jpg",
     badge: "Гарантія 10+ років",
     products: [
       {
@@ -293,6 +303,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Особливий напрямок мануфактури: випуск делікатних видань для психологів, коучів, центрів ментального здоров'я та корпоративного well-being. Приємні на дотик папери, надихаюча естетика, колоди карт у жорстких подарункових футлярах.",
     bannerImage: "/images/products/wellness-cards-mockup.jpg",
+    videoSrc: "/videos/hero-ambient.mp4",
+    posterSrc: "/videos/hero-ambient-poster.jpg",
     badge: "Well-being напрямок",
     products: [
       {
@@ -353,6 +365,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Квартальні календарі з курсором для бухгалтерів та офісів, елегантні настільні перекидні будиночки, настінні художні календарі великих форматів А3/А2 та кишенькові ламіновані візитки-календарі.",
     bannerImage: "/images/products/calendars-planner-mockup.jpg",
+    videoSrc: "/videos/calendar-renz.mp4",
+    posterSrc: "/videos/calendar-renz-poster.jpg",
     badge: "365 днів реклами",
     products: [
       {
@@ -413,6 +427,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Повний цикл виготовлення самоклейної маркувальної продукції: рулонна етикетка для автоматичних ліній розливу, стікерпаки з надсічкою Kiss-Cut, коробки зі щільного мікрогофрокартону та брендовані крафтові пакети з золотим тисненням.",
     bannerImage: "/images/capabilities/mockup-spirits-gold.jpg",
+    videoSrc: "/videos/roll-label-vorey.mp4",
+    posterSrc: "/videos/roll-label-vorey-poster.jpg",
     badge: "Власна лінія Konica Minolta",
     products: [
       {
@@ -473,6 +489,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Фінішне оздоблення, що перетворює звичайний відбиток на витвір поліграфічного мистецтва. Прецизійне гаряче тиснення золотою фольгою преміум-серій Kurz, об'ємні 3D-лаки, фігурна висічка штанцформами та бігування без заламування фарби.",
     bannerImage: "/images/branding/spirits-gold-foil.png",
+    videoSrc: "/videos/packaging-line.mp4",
+    posterSrc: "/videos/packaging-line-poster.jpg",
     badge: "Німецька фольга Kurz",
     products: [
       {
@@ -533,6 +551,8 @@ const CATEGORIES_DATA: CategorySectionData[] = [
     leadText:
       "Практичні та довговічні сувеніри з вашою фірмовою символікою. Комплектуємо подарункові набори разом із щоденниками та діловою поліграфією для партнерів, виставок та співробітників.",
     bannerImage: "/images/capabilities/mockup-delivery-box.jpg",
+    videoSrc: "/videos/plant-hero.mp4",
+    posterSrc: "/videos/plant-hero-poster.jpg",
     badge: "Брендований мерч",
     products: [
       {
@@ -800,57 +820,64 @@ export default function ProductsPage() {
             id={cat.id}
             className="scroll-mt-32 border-b border-slate-200 pb-28 last:border-b-0"
           >
-            {/* ВЕРХНЯ ЕЛЕГАНТНА ПРЕЗЕНТАЦІЯ КОЛЕКЦІЇ (ВЕЛИКИЙ БРЕНДОВАНИЙ БАНЕР + ОПИС) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">
+            {/* ВЕРХНЯ ЕЛЕГАНТНА ПРЕЗЕНТАЦІЯ КОЛЕКЦІЇ (ОПИС ЗЛІВА, КОРОТКЕ ВІДЕО СПРАВА) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center mb-16">
               
-              {/* Фото з власним брендуванням «Альфа і Омега» */}
-              <div className="lg:col-span-6 relative aspect-16/10 rounded-sm overflow-hidden bg-slate-100 border border-slate-200 group shadow-md">
-                <Image
-                  src={cat.bannerImage}
-                  alt={cat.title}
-                  fill
-                  className="object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs font-sans">
-                  <span className="px-3 py-1 bg-slate-950/70 backdrop-blur-md rounded-xs border border-white/20 font-bold uppercase tracking-widest text-[10px]">
-                    {cat.badge}
-                  </span>
-                  <span className="text-white/80 font-serif italic text-sm">
-                    Виробництво «Альфа і Омега»
-                  </span>
-                </div>
-              </div>
-
-              {/* Текстовий опис колекції */}
-              <div className="lg:col-span-6 space-y-5">
-                <div className="inline-flex items-center gap-2">
-                  <span className="text-xs font-sans font-bold tracking-[0.25em] text-edelvin-blue uppercase">
-                    Колекція 0{catIdx + 1}
-                  </span>
-                  <span className="w-8 h-px bg-slate-300"></span>
-                  <span className="text-xs font-sans text-slate-500 uppercase tracking-wider">
+              {/* ТЕКСТОВИЙ ОПИС КОЛЕКЦІЇ — ЗЛІВА */}
+              <div className="lg:col-span-6 space-y-6 order-1">
+                <div className="space-y-2">
+                  <span className="text-xs font-sans font-bold text-edelvin-blue uppercase tracking-widest block">
                     {cat.subtitle}
                   </span>
+                  <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight leading-[1.12]">
+                    {cat.title}
+                  </h2>
                 </div>
-
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight leading-[1.15]">
-                  {cat.title}
-                </h2>
 
                 <p className="font-sans text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
                   {cat.leadText}
                 </p>
 
-                <div className="pt-3">
+                <div className="pt-2">
                   <button
                     type="button"
                     onClick={() => handleOpenInquiry(`Колекція: ${cat.title}`)}
-                    className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-slate-950 text-white hover:bg-edelvin-blue transition-colors rounded-xs text-xs font-sans font-bold uppercase tracking-widest cursor-pointer shadow-sm"
+                    className="inline-flex items-center gap-2.5 px-7 py-4 bg-slate-950 text-white hover:bg-edelvin-blue transition-all rounded-xs text-xs font-sans font-bold uppercase tracking-widest cursor-pointer shadow-md group"
                   >
                     <span>Замовити прорахунок накладу</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
+                </div>
+              </div>
+
+              {/* КОРОТКЕ ВІДЕО ВИРОБНИЦТВА — СПРАВА */}
+              <div className="lg:col-span-6 relative aspect-16/10 rounded-sm overflow-hidden bg-slate-950 border border-slate-200 group shadow-lg order-2">
+                {cat.videoSrc ? (
+                  <video
+                    src={cat.videoSrc}
+                    poster={cat.posterSrc || cat.bannerImage}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
+                  />
+                ) : (
+                  <Image
+                    src={cat.bannerImage}
+                    alt={cat.title}
+                    fill
+                    className="object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs font-sans">
+                  <span className="px-3 py-1 bg-slate-950/80 backdrop-blur-md rounded-xs border border-white/20 font-bold uppercase tracking-widest text-[10px]">
+                    {cat.badge}
+                  </span>
+                  <span className="text-white/80 font-serif italic text-sm">
+                    Відео виробництва «Альфа і Омега»
+                  </span>
                 </div>
               </div>
 
