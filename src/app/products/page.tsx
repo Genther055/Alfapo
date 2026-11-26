@@ -20,7 +20,9 @@ import {
   Check,
   ChevronRight,
   Layers,
-  FileText
+  FileText,
+  Menu,
+  X
 } from "lucide-react";
 import FullWidthVideoSection from "@/components/FullWidthVideoSection";
 
@@ -564,6 +566,7 @@ const CATEGORIES_DATA: CategorySectionData[] = [
 export default function ProductsPage() {
   const [inquiryProduct, setInquiryProduct] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -583,8 +586,18 @@ export default function ProductsPage() {
     setFormSubmitted(true);
   };
 
+  const scrollToCategory = (categoryId: string) => {
+    setIsDrawerOpen(false);
+    const element = document.getElementById(categoryId);
+    if (element) {
+      const yOffset = -90;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="bg-white min-h-screen text-slate-900 selection:bg-edelvin-blue selection:text-white">
+    <div className="bg-white min-h-screen text-slate-900 selection:bg-edelvin-blue selection:text-white relative">
       {/* 1. HERO СЕКЦІЯ: ЕЛЕГАНТНИЙ ФОРМАТ БЕЗ КАЛЬКУЛЯТОРНИХ ПАНЕЛЕЙ */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-slate-950 text-white border-b border-slate-200 overflow-hidden">
         {/* Subtle Ambient Video Background */}
@@ -642,39 +655,142 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* 2. ЛАКОНІЧНА ЕЛЕГАНТНА НАВІГАЦІЯ ПО КОЛЕКЦІЯХ (БЕЗ ПОШУКІВ ТА ПАНЕЛЕЙ-КАЛЬКУЛЯТОРІВ) */}
-      <nav className="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 py-3.5 shadow-xs transition-all">
-        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-          <div className="flex items-center justify-between gap-4">
-            
-            {/* Горизонтальна навігація по назвах колекцій */}
-            <div className="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar text-xs font-sans font-semibold text-slate-600">
-              {CATEGORIES_DATA.map((cat, idx) => (
-                <a
-                  key={cat.id}
-                  href={`#${cat.id}`}
-                  className="px-3 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-950 transition-colors shrink-0 whitespace-nowrap inline-flex items-center gap-1.5"
-                >
-                  <span className="text-slate-400 text-[10px] font-bold">0{idx + 1}</span>
-                  <span>{cat.title.split(" ")[0]} {cat.title.split(" ")[1] || ""}</span>
-                </a>
-              ))}
-            </div>
+      {/* 2. ЛАКОНІЧНА СТАТИЧНА СТРІЧКА УПРАВЛІННЯ (НЕ ЛИПНЕ І НЕ ПЕРЕКРИВАЄ ТЕКСТ) */}
+      <div className="border-b border-slate-200 bg-slate-50 py-4">
+        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setIsDrawerOpen(true)}
+              className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-slate-950 text-white hover:bg-edelvin-blue rounded-full text-xs font-sans font-bold uppercase tracking-wider transition-all cursor-pointer shadow-xs group"
+            >
+              <Menu className="w-4 h-4 text-gold-300 group-hover:rotate-90 transition-transform duration-300" />
+              <span>Каталог колекцій (9 напрямів)</span>
+            </button>
+            <span className="text-xs font-sans text-slate-500 hidden md:inline">
+              Швидкий перехід до будь-якого виду поліграфії та пакування
+            </span>
+          </div>
 
-            {/* Прямий дзвінок технологу */}
-            <div className="hidden lg:flex items-center gap-3 shrink-0 pl-4 border-l border-slate-200">
-              <a
-                href="tel:+380432550333"
-                className="inline-flex items-center gap-2 text-xs font-sans font-bold text-slate-950 hover:text-edelvin-blue transition-colors"
-              >
-                <Phone className="w-3.5 h-3.5 text-edelvin-blue" />
-                <span>+38 (0432) 550-333</span>
-              </a>
-            </div>
-
+          <div className="flex items-center gap-3 text-xs font-sans">
+            <span className="text-slate-500">Консультація чергового інженера:</span>
+            <a
+              href="tel:+380432550333"
+              className="font-bold text-slate-950 hover:text-edelvin-blue transition-colors flex items-center gap-1.5"
+            >
+              <Phone className="w-3.5 h-3.5 text-edelvin-blue" />
+              <span>+38 (0432) 550-333</span>
+            </a>
           </div>
         </div>
-      </nav>
+      </div>
+
+      {/* ПЛАВАЮЧА КНОПКА БУРГЕР-МЕНЮ ЗБОКУ (ЗАВЖДИ ЗРУЧНО ВІДКРИТИ ПРИ СКРОЛІ) */}
+      <div className="fixed right-5 sm:right-8 bottom-8 z-40">
+        <button
+          type="button"
+          onClick={() => setIsDrawerOpen(true)}
+          className="flex items-center gap-3 px-5 py-3.5 bg-slate-950/95 hover:bg-edelvin-blue text-white rounded-full shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 cursor-pointer backdrop-blur-md group"
+          title="Відкрити меню напрямів продукції"
+        >
+          <Menu className="w-4 h-4 text-gold-300 group-hover:rotate-90 transition-transform duration-300" />
+          <span className="text-xs font-sans font-bold uppercase tracking-wider hidden sm:inline">
+            Колекції виробництва
+          </span>
+          <span className="text-xs font-sans font-bold uppercase tracking-wider sm:hidden">
+            Меню
+          </span>
+          <span className="w-5 h-5 rounded-full bg-white/20 text-[10px] font-bold flex items-center justify-center text-white">
+            9
+          </span>
+        </button>
+      </div>
+
+      {/* БІЧНИЙ БУРГЕР-DRAWER (САЙДБАР ЗБОКУ) */}
+      {isDrawerOpen && (
+        <div className="fixed inset-0 z-50 flex justify-end">
+          {/* Фон затемнення */}
+          <div
+            className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 animate-in fade-in"
+            onClick={() => setIsDrawerOpen(false)}
+          />
+
+          {/* Панель, що висувається справа */}
+          <aside className="relative w-full max-w-md sm:max-w-lg bg-white h-full shadow-2xl z-10 flex flex-col justify-between overflow-y-auto animate-in slide-in-from-right duration-300 border-l border-slate-200">
+            <div className="p-6 sm:p-8">
+              {/* Заголовок меню */}
+              <div className="flex items-center justify-between pb-6 border-b border-slate-200">
+                <div>
+                  <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-edelvin-blue block">
+                    ВИРОБНИЧИЙ КАТАЛОГ
+                  </span>
+                  <h3 className="font-serif text-2xl text-slate-950 font-normal mt-0.5">
+                    Колекції продукції
+                  </h3>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsDrawerOpen(false)}
+                  className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors cursor-pointer"
+                  title="Закрити меню"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Список 9 колекцій */}
+              <nav className="py-6 space-y-2">
+                {CATEGORIES_DATA.map((cat, idx) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => scrollToCategory(cat.id)}
+                    className="w-full text-left p-3.5 rounded-sm hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-all flex items-center justify-between group cursor-pointer"
+                  >
+                    <div className="flex items-center gap-3.5">
+                      <span className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-slate-950 group-hover:text-white text-slate-700 text-xs font-bold font-sans flex items-center justify-center transition-colors shrink-0">
+                        0{idx + 1}
+                      </span>
+                      <div>
+                        <span className="font-serif text-base text-slate-950 group-hover:text-edelvin-blue transition-colors block leading-snug">
+                          {cat.title}
+                        </span>
+                        <span className="text-[11px] font-sans text-slate-500 block">
+                          {cat.subtitle} • {cat.products.length} видів
+                        </span>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-edelvin-blue group-hover:translate-x-1 transition-all shrink-0 ml-2" />
+                  </button>
+                ))}
+              </nav>
+            </div>
+
+            {/* Низ бічного меню: контакти та швидкий прорахунок */}
+            <div className="p-6 sm:p-8 bg-slate-50 border-t border-slate-200 space-y-4">
+              <div className="flex items-center justify-between text-xs font-sans">
+                <span className="text-slate-500">Прямий номер інженера:</span>
+                <a
+                  href="tel:+380432550333"
+                  className="font-bold text-slate-950 hover:text-edelvin-blue transition-colors"
+                >
+                  +38 (0432) 550-333
+                </a>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setIsDrawerOpen(false);
+                  handleOpenInquiry("Загальний розрахунок накладу");
+                }}
+                className="w-full py-3.5 bg-slate-950 hover:bg-edelvin-blue text-white rounded-xs text-xs font-sans font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+              >
+                Розрахувати тираж
+              </button>
+            </div>
+          </aside>
+        </div>
+      )}
 
       {/* 3. ОСНОВНІ БЛОКИ КОЛЕКЦІЙ З ФОТО БРЕНДУВАННЯ ТА КАРТКАМИ ДЛЯ ПОКУПЦЯ */}
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16 sm:py-24 space-y-32">
